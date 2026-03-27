@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://intelart.ca/</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/?lang=en"/>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://intelart.ca/about.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/about.html?lang=en"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/services.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/services.html?lang=en"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/offers.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/offers.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/offers.html?lang=en"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/contact.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/contact.html?lang=en"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/offre-sprint.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/offre-sprint.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/offre-sprint.html?lang=en"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/offre-audit.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/offre-audit.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/offre-audit.html?lang=en"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/offre-consulting.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/offre-consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/offre-consulting.html?lang=en"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/offre-agent.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/offre-agent.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/offre-agent.html?lang=en"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/offre-surmesure.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/offre-surmesure.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/offre-surmesure.html?lang=en"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/secteur-recrutement.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/secteur-recrutement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/secteur-recrutement.html?lang=en"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/secteur-finance.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/secteur-finance.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/secteur-finance.html?lang=en"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/secteur-operations.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/secteur-operations.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/secteur-operations.html?lang=en"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/secteur-immobilier.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/secteur-immobilier.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/secteur-immobilier.html?lang=en"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/secteur-juridique.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/secteur-juridique.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/secteur-juridique.html?lang=en"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/secteur-sante.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/secteur-sante.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/secteur-sante.html?lang=en"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://intelart.ca/privacy-policy.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intelart.ca/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intelart.ca/privacy-policy.html?lang=en"/>
+    <priority>0.3</priority>
+  </url>
+</urlset>

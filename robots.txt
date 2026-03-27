@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /logos.html
+Disallow: /includes/
+
+Sitemap: https://intelart.ca/sitemap.xml
