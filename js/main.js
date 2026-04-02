@@ -1072,11 +1072,7 @@ const IB_MAP = {blue:'ib-blue',cyan:'ib-cyan',green:'ib-green',red:'ib-red',purp
 const TAG_MAP = {blue:'tag-blue',cyan:'tag-cyan',green:'tag-green',red:'tag-red'};
 
 /* ─── STATE ─── */
-<<<<<<< HEAD
-let lang = 'fr';
-=======
 let lang = initLang;
->>>>>>> origin/main
 let curPage = document.documentElement.dataset.page || 'home';
 let scrollIndicatorHidden = false;
 
