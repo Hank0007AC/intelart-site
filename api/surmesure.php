@@ -31,7 +31,7 @@ if (empty($name) || empty($email)) {
 $to      = 'contact@intelart.ca';
 $subject = 'Demande sur mesure - ' . $name;
 $body_txt = "Nom: $name\nEmail: $email\nEntreprise: $company\nSecteur: $sector\nBudget: $budget\n\nMessage:\n$message";
-$headers  = "From: noreply@intelart.ca\r\nReply-To: $email\r\nContent-Type: text/plain; charset=utf-8";
+$headers  = "From: contact@intelart.ca\r\nReply-To: $email\r\nContent-Type: text/plain; charset=utf-8";
 
 if (mail($to, $subject, $body_txt, $headers)) {
     echo json_encode(['success' => true, 'message' => 'Demande envoyée avec succès']);
