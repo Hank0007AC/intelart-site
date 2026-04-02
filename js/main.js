@@ -26,12 +26,12 @@ const initLang = urlParams.get('lang') === 'en' ? 'en' : (localStorage.getItem('
 ═══════════════════════════════════════ */
 const C = {
 fr: {
-nav: { home:'Accueil', about:'À propos', services:'Services', offers:'Offres', secteurs:'Secteurs', contact:'Contact', cta:'Réserver un échange' },
+nav: { home:'Accueil', about:'À propos', services:'Services', offers:'Offres', secteurs:'Secteurs', contact:'Contact', cta:'Demander une démo' },
 ddOffres: [
-{icon:'bolt',label:'Sprint IA',page:'offre-sprint'},
-{icon:'search',label:'Audit IA',page:'offre-audit'},
-{icon:'compass',label:'Consulting',page:'offre-consulting'},
-{icon:'cpu',label:'Agent IA Personnalisé',page:'offre-agent'},
+{icon:'bolt',label:'Déploiement IA',page:'offre-sprint'},
+{icon:'search',label:'Diagnostic IA',page:'offre-audit'},
+{icon:'compass',label:'Conseil stratégique',page:'offre-consulting'},
+{icon:'cpu',label:'Agent IA dédié',page:'offre-agent'},
 {icon:'custom',label:'Sur Mesure',page:'offre-surmesure'}
 ],
 ddSecteurs: [
@@ -43,87 +43,87 @@ ddSecteurs: [
 {icon:'heart',label:'Santé',page:'secteur-sante'}
 ],
 meta: {
-home:{title:'Intelart — Agence IA pour PME B2B au Canada',desc:'Automatisez vos processus et mettez en place un premier système IA concret en 1 à 2 semaines. PME B2B, Ottawa, Canada.',keys:'agence IA Ottawa, automatisation PME, intelligence artificielle B2B, sprint IA, consulting IA Canada'},
-about:{title:'À propos — Intelart | IA appliquée pour PME B2B',desc:'Découvrez Intelart : une approche directe, des résultats concrets en IA appliquée pour les PME B2B au Canada.',keys:'Intelart, agence IA Ottawa, IA appliquée PME, fondateur, équipe IA Canada'},
-services:{title:'Services — Intelart | Audit, Automatisation, IA',desc:'Audit IA, structuration, automatisation, systèmes IA, accompagnement et conseil. Six services concrets pour PME B2B.',keys:'audit IA, automatisation processus, agent IA, consulting IA, structuration données, accompagnement PME'},
-offers:{title:'Offres — Intelart | Sprint IA en 1-2 semaines',desc:'Sprint IA, Audit, Consulting, Agent IA et projets sur mesure. Un résultat concret sans projet lourd.',keys:'sprint IA, audit IA, consulting IA, agent IA OpenClaw, projet sur mesure, tarifs IA PME'},
-contact:{title:'Contact — Intelart | Parlons de votre projet IA',desc:'Contactez Intelart pour un échange de 20 minutes. Réponse sous 24h. Ottawa, Canada.',keys:'contact Intelart, rendez-vous IA, consultation gratuite, Ottawa Canada'},
-'offre-sprint':{title:'Sprint IA — Intelart | Premier système IA en 10 jours',desc:'Sprint IA : audit, cadrage, prototype et livraison en 1-2 semaines. Résultat concret garanti. Ottawa, Canada.'},
-'offre-audit':{title:'Audit IA — Intelart | Diagnostic en 3-5 jours',desc:'Audit complet de vos processus avec rapport d\'opportunités IA classées par impact. Feuille de route priorisée.'},
-'offre-consulting':{title:'Consulting IA — Intelart | Sessions stratégiques',desc:'Conseil en transformation digitale orientée IA. Architecture cible et plan de déploiement. Ottawa, Canada.'},
-'offre-agent':{title:'Agent IA Personnalisé — Intelart | Technologie OpenClaw',desc:'Agent IA sur mesure déployé sur votre infrastructure. Propulsé par OpenClaw. Devis personnalisé.'},
+home:{title:'Intelart — Systèmes IA pour PME de services | Ottawa, Canada',desc:'Ne laissez plus vos demandes clients se perdre. Intelart déploie des systèmes IA qui captent, qualifient et convertissent vos opportunités. PME B2B, Ottawa, Canada.',keys:'agence IA Ottawa, qualification leads PME, automatisation commerciale, IA B2B Canada, conversion demandes clients'},
+about:{title:'À propos — Intelart | IA concrète pour PME de services',desc:'Découvrez Intelart : 6 ans de terrain B2B, 3 ans d\'IA appliquée. Des résultats concrets pour les PME de services au Canada.',keys:'Intelart, agence IA Ottawa, IA appliquée PME, fondateur, résultats business'},
+services:{title:'Services — Intelart | Diagnostic, Déploiement, Accompagnement IA',desc:'Diagnostic IA orienté ROI, déploiement IA prioritaire et accompagnement sur mesure. Des résultats business mesurables pour PME.',keys:'diagnostic IA, déploiement IA, accompagnement PME, qualification leads, automatisation commerciale'},
+offers:{title:'Offres — Intelart | Déploiement IA rapide pour PME',desc:'Déploiement IA prioritaire, diagnostic orienté ROI, conseil stratégique et solutions sur mesure. Résultats concrets, sans projet lourd.',keys:'déploiement IA rapide, diagnostic IA ROI, conseil IA PME, agent IA personnalisé, tarifs IA PME'},
+contact:{title:'Contact — Intelart | Parlons de vos opportunités perdues',desc:'Échangez 20 minutes avec Intelart. Identifiez vos pertes de revenus et les leviers IA les plus rentables. Réponse sous 24h.',keys:'contact Intelart, rendez-vous IA, diagnostic gratuit, Ottawa Canada'},
+'offre-sprint':{title:'Déploiement IA Prioritaire — Intelart | Résultat rapide',desc:'Premier système IA déployé en 2 à 4 semaines. On cible le levier le plus rentable pour votre entreprise. Ottawa, Canada.'},
+'offre-audit':{title:'Diagnostic IA — Intelart | Opportunités classées par ROI',desc:'Diagnostic complet de vos processus avec opportunités IA classées par retour sur investissement. Feuille de route priorisée.'},
+'offre-consulting':{title:'Conseil IA — Intelart | Décisions stratégiques éclairées',desc:'Conseil de direction pour décider quoi déployer, dans quel ordre, et avec quel ROI attendu. Ottawa, Canada.'},
+'offre-agent':{title:'Agent IA Personnalisé — Intelart | Assistant interne dédié',desc:'Agent IA sur mesure déployé sur votre infrastructure. Conçu pour vos besoins récurrents complexes. Devis personnalisé.'},
 'offre-surmesure':{title:'Sur Mesure — Intelart | Projet personnalisé',desc:'Développement spécifique, intégration complexe, automatisation avancée. Devis gratuit sous 48h.'},
-'secteur-recrutement':{title:'IA pour le Recrutement — Intelart',desc:'Qualifiez 3x plus de candidats sans agrandir votre équipe. Automatisation du tri CV et des relances.'},
-'secteur-finance':{title:'IA pour les Services Financiers — Intelart',desc:'Automatisez vos rapports clients et libérez vos conseillers. 80% de temps économisé.'},
-'secteur-operations':{title:'IA pour les Opérations — Intelart',desc:'Centralisez votre suivi et éliminez les erreurs manuelles. Dashboard centralisé + alertes intelligentes.'},
-'secteur-immobilier':{title:'IA pour l\'Immobilier — Intelart',desc:'Automatisez votre suivi client, ne perdez plus un lead. CRM automatisé + relances personnalisées.'},
-'secteur-juridique':{title:'IA pour le Juridique — Intelart',desc:'Structurez vos dossiers et ne ratez plus une deadline. Alertes + assistance recherche documentaire.'},
-'secteur-sante':{title:'IA pour la Santé — Intelart',desc:'Moins d\'administratif, plus de temps pour vos patients. Automatisation RDV + rappels + suivi.'},
+'secteur-recrutement':{title:'IA pour le Recrutement — Intelart',desc:'Traitez plus de candidatures et relancez plus vite. Ne perdez plus les bons profils faute de réactivité.'},
+'secteur-finance':{title:'IA pour les Services Financiers — Intelart',desc:'Automatisez vos rapports clients et libérez vos conseillers pour le conseil à valeur ajoutée.'},
+'secteur-operations':{title:'IA pour les Opérations — Intelart',desc:'Centralisez votre suivi, éliminez les erreurs et gagnez en visibilité temps réel sur vos flux.'},
+'secteur-immobilier':{title:'IA pour l\'Immobilier — Intelart',desc:'Ne perdez plus un lead après le premier contact. Suivi automatisé, relances personnalisées, zéro oubli.'},
+'secteur-juridique':{title:'IA pour le Juridique — Intelart',desc:'Filtrez, organisez et priorisez vos demandes et dossiers. Zéro deadline manquée.'},
+'secteur-sante':{title:'IA pour la Santé — Intelart',desc:'Réduisez les no-shows et le temps administratif. Plus de temps pour vos patients.'},
 'logos':{title:'Variantes Logo — Intelart',desc:'Propositions de logos pour Intelart. 5 variantes SVG à valider.'},
 'privacy':{title:'Politique de confidentialité — Intelart',desc:'Politique de confidentialité d\'Intelart. Protection de vos données personnelles.',keys:'politique confidentialité, données personnelles, LPRPDE, Intelart'}
 },
 home: {
-badge:'Agence IA · Ottawa, Canada',
-h1:'Éliminez 10h de tâches manuelles\npar semaine — en 10 jours',
-sub:'Vos équipes perdent du temps sur des tâches à faible valeur. On identifie votre meilleur cas d\'usage IA, on le construit et on le livre — en 10 jours, sans engagement. PME B2B à Ottawa et partout au Canada.',
-cta1:'Réserver 20 min — gratuit', cta2:'Voir nos offres',
-trust:['6+ ans en B2B','3 continents','IA depuis 2022','Résultat en 10 jours'],
+badge:'Systèmes IA · Ottawa, Canada',
+h1:'Chaque demande non traitée\nest du chiffre d\'affaires perdu',
+sub:'Intelart met en place des systèmes IA qui répondent, qualifient, organisent et relancent vos demandes clients — pour que votre entreprise réponde plus vite, perde moins d\'opportunités et gagne en capacité sans recruter.',
+cta1:'Demander une démo', cta2:'Voir les cas d\'usage',
+trust:['6+ ans en B2B','3 continents','IA depuis 2022','Déploiement rapide'],
 stats:[
-  {num:'6',suffix:'+',lab:'ans d\'expérience B2B',prefix:''},
-  {num:'10',suffix:'',lab:'jours pour un premier résultat',prefix:''},
+  {num:'6',suffix:'+',lab:'ans de terrain B2B',prefix:''},
+  {num:'40',suffix:'%',lab:'de conversion en plus',prefix:'+'},
   {num:'3',suffix:'',lab:'marchés internationaux',prefix:''},
-  {num:'100',suffix:'%',lab:'focus exécution',prefix:''}
+  {num:'100',suffix:'%',lab:'focus résultat business',prefix:''}
 ],
-probEye:'Le constat', probH2:'Ce qui vous freine vraiment avec l\'IA',
-probIntro:'Vous savez que l\'IA peut accélérer votre quotidien. Mais les obstacles sont réels. Voici ce que vivent nos clients avant de nous contacter.',
+probEye:'Le vrai problème', probH2:'Ce qui vous coûte de l\'argent chaque jour',
+probIntro:'Vous ne manquez pas de demandes. Vous manquez la capacité de toutes les traiter. Voici ce que vivent nos clients avant de nous contacter.',
 probCta:'Voir comment on y répond →',
 probItems:[
-  {icon:'clock',color:'red',title:'Trop d\'options, pas de direction',desc:'ChatGPT, Copilot, Claude… Tout le monde en parle, mais par où commencer vraiment ?'},
-  {icon:'loop',color:'red',title:'Les projets IA s\'éternisent',desc:'6 mois pour un pilote, et toujours pas de décision. L\'IA devient une dépense, pas un atout.'},
-  {icon:'team',color:'red',title:'Pas de compétences IA en interne',desc:'Recruter un expert ? Trop cher et trop lent. Il faut externaliser l\'expertise, intelligemment.'},
-  {icon:'money',color:'red',title:'Peur de mal investir',desc:'Les technos changent tous les 3 mois. Une approche pragmatique d\'abord, infrastructure plus tard.'},
+  {icon:'clock',color:'red',title:'Des demandes restent sans réponse',desc:'Formulaires, appels, emails — une partie de vos demandes entrantes tombe dans le vide. Chaque oubli est un client perdu.'},
+  {icon:'loop',color:'red',title:'Les leads refroidissent avant rappel',desc:'Un prospect attend une réponse en heures, pas en jours. Le temps de réponse tue plus de ventes que le prix.'},
+  {icon:'team',color:'red',title:'Trop de traitement manuel',desc:'Votre équipe passe plus de temps à saisir, trier et relancer qu\'à vendre ou conseiller.'},
+  {icon:'money',color:'red',title:'Recruter pour absorber le volume ?',desc:'Vous hésitez entre refuser des demandes et embaucher. L\'IA permet d\'absorber plus sans alourdir la masse salariale.'},
 ],
 wwdEye:'Notre approche', wwdH2:'Ce que nous faisons concrètement',
-wwdSub:'Pas de grands discours. Des actions concrètes qui produisent un premier résultat visible.',
+wwdSub:'On ne vend pas de la technologie. On résout un problème de revenus.',
 wwdItems:[
-  {num:'01',title:'Remettre de l\'ordre',desc:'Identifier les frictions, clarifier les étapes, améliorer la lisibilité des processus.'},
-  {num:'02',title:'Réduire les tâches manuelles',desc:'Cibler les flux qui coûtent le plus de temps et les automatiser simplement.'},
-  {num:'03',title:'Identifier le bon cas d\'usage',desc:'Trouver ce qui a le plus d\'impact pour votre activité spécifique.'},
-  {num:'04',title:'Livrer une première solution',desc:'Déployer une automatisation ou un premier système IA utile et compréhensible.'},
+  {num:'01',title:'Identifier vos pertes',desc:'Où perdez-vous des demandes, du temps de réponse, des opportunités de conversion ?'},
+  {num:'02',title:'Cibler le levier le plus rentable',desc:'Quel cas d\'usage aura le plus d\'impact sur votre chiffre d\'affaires ?'},
+  {num:'03',title:'Déployer rapidement',desc:'Un système IA concret, en production, en quelques semaines.'},
+  {num:'04',title:'Mesurer le retour',desc:'Des indicateurs clairs : leads traités, temps de réponse, taux de conversion.'},
 ],
 procEye:'La méthode', procH2:'Comment ça se passe',
-procSub:'4 phases, 10 jours maximum. Chaque étape a un objectif clair et un livrable.',
+procSub:'Un périmètre clair, un déploiement rapide, un résultat mesurable.',
 procSteps:[
-  {day:'Jour 1',title:'Cadrage',desc:'Objectifs, contraintes, outils, critères de succès.',icon:'scope'},
-  {day:'J 2–3',title:'Diagnostic',desc:'Observation du workflow + identification des opportunités.',icon:'diag'},
-  {day:'J 4–6',title:'Prototype',desc:'Construction + itérations rapides avec vous.',icon:'build'},
-  {day:'J 7–10',title:'Livraison',desc:'Démo + docs + plan de déploiement + KPI.',icon:'deliver'},
+  {day:'Semaine 1',title:'Cadrage',desc:'Objectifs, contraintes, outils, critères de succès.',icon:'scope'},
+  {day:'S 1–2',title:'Diagnostic',desc:'Cartographie des flux + identification des pertes.',icon:'diag'},
+  {day:'S 2–3',title:'Construction',desc:'Déploiement du système + itérations avec vous.',icon:'build'},
+  {day:'S 3–4',title:'Livraison',desc:'Système en production + formation + indicateurs.',icon:'deliver'},
 ],
-ucEye:'Cas concrets', ucH2:'L\'IA appliquée à votre secteur',
-ucSub:'Quelques exemples de ce que nous livrons en un Sprint IA.',
+ucEye:'Cas concrets', ucH2:'Des résultats dans votre secteur',
+ucSub:'Quelques exemples de résultats obtenus par nos clients.',
 useCases:[
-  {tag:'Recrutement',tagColor:'blue',problem:'3h/jour à trier les CV et relancer les candidats',solution:'Qualificateur automatique + relances programmées',result:'2x à 3x plus de dossiers traités',link:'secteur-recrutement',
+  {tag:'Recrutement',tagColor:'blue',problem:'Bons candidats perdus faute de réactivité',solution:'Qualification automatique + relances programmées',result:'3x plus de candidatures traitées',link:'secteur-recrutement',
    svgBg:'rgba(59,130,246,.06)',svgStroke:'#3B82F6'},
-  {tag:'Services financiers',tagColor:'cyan',problem:'Rapports clients générés à la main (3-5h/rapport)',solution:'Génération automatique depuis les données internes',result:'70-80% de temps économisé',link:'secteur-finance',
+  {tag:'Services financiers',tagColor:'cyan',problem:'Conseillers noyés dans l\'administratif',solution:'Rapports clients générés automatiquement',result:'80% de temps libéré pour le conseil',link:'secteur-finance',
    svgBg:'rgba(6,182,212,.06)',svgStroke:'#06B6D4'},
-  {tag:'Opérations',tagColor:'green',problem:'Suivi sur 3 outils différents, erreurs fréquentes',solution:'Dashboard centralisé + alertes intelligentes',result:'Visibilité temps réel, erreurs quasi éliminées',link:'secteur-operations',
+  {tag:'Immobilier',tagColor:'green',problem:'60% des leads jamais relancés après premier contact',solution:'Suivi automatisé + relances personnalisées',result:'Zéro lead oublié, 2x plus de visites',link:'secteur-immobilier',
    svgBg:'rgba(16,185,129,.06)',svgStroke:'#10B981'}
 ],
 benEye:'Ce que vous obtenez', benH2:'Des résultats mesurables',
 benItems:[
-  {icon:'down',label:'Moins de tâches manuelles',sub:'Ciblées et automatisées'},
-  {icon:'clear',label:'Plus de clarté',sub:'Processus lisibles'},
-  {icon:'check',label:'Meilleur suivi',sub:'Rien ne tombe'},
-  {icon:'ai',label:'Système IA concret',sub:'En production'},
-  {icon:'next',label:'Base pour avancer',sub:'Évolutive'},
+  {icon:'down',label:'Moins d\'opportunités perdues',sub:'Chaque demande est traitée'},
+  {icon:'clear',label:'Temps de réponse réduit',sub:'Réactivité automatisée'},
+  {icon:'check',label:'Meilleure conversion',sub:'Leads qualifiés et relancés'},
+  {icon:'ai',label:'Plus de capacité',sub:'Sans recruter'},
+  {icon:'next',label:'Base pour grandir',sub:'Évolutive'},
 ],
-ctaH2:'Prêt à démarrer ?', ctaSub:'Réservez 20 minutes pour voir si votre situation est un bon candidat. Pas de pitch, pas d\'engagement.', ctaBtn:'Réserver un échange de 20 minutes',
+ctaH2:'Prêt à capter plus d\'opportunités ?', ctaSub:'20 minutes pour identifier vos pertes de revenus et les leviers IA les plus rentables. Sans engagement.', ctaBtn:'Réserver un échange de 20 minutes',
 socialEye:'Résultats clients', socialH2:'Ils nous font confiance',
 testimonials:[
-  {stars:5,quote:'Grâce à l\'automatisation mise en place, nous avons réduit de 60% le temps de qualification de nos leads export. Le ROI a été visible dès le premier mois.',author:'Directeur commercial',company:'Automium'},
-  {stars:5,quote:'La digitalisation de nos processus internes a transformé notre façon de travailler. Moins de papier, moins d\'erreurs, et une visibilité en temps réel sur toute la chaîne.',author:'Directeur des opérations',company:'Getcomar'},
-  {stars:5,quote:'L\'intégration de l\'IA dans notre workflow de média planning nous a permis de traiter 3x plus de briefs clients sans augmenter l\'équipe.',author:'Responsable digital',company:'Intelcia Digital Advertising'},
-  {stars:5,quote:'En 10 jours, nos relances clients étaient automatisées et notre taux de conversion a augmenté de 40%. Du concret, pas du PowerPoint.',author:'Directeur général',company:'Webfy Corp Limited'}
+  {stars:5,quote:'Grâce au système mis en place, nous avons réduit de 60% le temps de qualification de nos leads export. Le ROI a été visible dès le premier mois.',author:'Directeur commercial',company:'Automium'},
+  {stars:5,quote:'La centralisation de nos flux internes a transformé notre façon de travailler. Moins d\'erreurs, et une visibilité en temps réel sur toute la chaîne.',author:'Directeur des opérations',company:'Getcomar'},
+  {stars:5,quote:'L\'IA intégrée à notre workflow nous a permis de traiter 3x plus de demandes clients sans augmenter l\'équipe.',author:'Responsable digital',company:'Intelcia Digital Advertising'},
+  {stars:5,quote:'Nos relances clients sont automatisées et notre taux de conversion a augmenté de 40%. Du concret, pas du PowerPoint.',author:'Directeur général',company:'Webfy Corp Limited'}
 ],
 credBar:['Ottawa, Canada','6+ ans de terrain B2B','Ex Havas · Publicis · GroupeM','Bilingue FR/EN','IA appliquée depuis 2022'],
 },
@@ -137,7 +137,7 @@ values:[
   {icon:'bulb',title:'L\'IA doit servir le business',desc:'Pas la tech pour la tech. Si ça ne fait pas gagner du temps ou de l\'argent, on ne le fait pas.'},
   {icon:'star',title:'Terrain avant théorie',desc:'6 ans de vente B2B m\'ont appris que seuls les résultats comptent. Pas les rapports.'},
   {icon:'pulse',title:'Commencer là où vous êtes',desc:'Pas besoin d\'être "digital ready". On part de votre réalité, pas d\'un idéal.'},
-  {icon:'tick',title:'Prouver avant de vendre',desc:'Un premier résultat concret en 10 jours. Ensuite, vous décidez librement.'},
+  {icon:'tick',title:'Prouver avant de vendre',desc:'Un premier résultat concret en quelques semaines. Ensuite, vous décidez librement.'},
 ],
 founderTitle:'Le mot du fondateur',
 founderText:'J\'ai vendu, prospecté et géré des comptes clés pendant 6 ans — en France, au Maroc et au Canada. Quand ChatGPT est arrivé fin 2022, j\'ai immédiatement vu ce que l\'IA pouvait changer dans le quotidien commercial des PME. Pas dans 5 ans. Maintenant. J\'ai automatisé ma propre prospection, puis celle de mes clients. Intelart, c\'est cette expertise packagée : on prend vos vrais problèmes opérationnels et on les résout avec l\'IA — rapidement, sans jargon, avec des résultats mesurables dès la deuxième semaine.',
@@ -146,7 +146,7 @@ wIntro:'Nous fonctionnons par sprints courts, avec un périmètre clair dès le 
 steps:[
   {title:'Écouter avant de proposer',desc:'Comprendre votre situation réelle — pas ce que vous "devriez" faire, mais ce qui vous freine aujourd\'hui.'},
   {title:'Cibler le cas d\'usage à plus fort impact',desc:'Identifier la tâche qui vous coûte le plus de temps et qui est automatisable rapidement.'},
-  {title:'Livrer en 10 jours',desc:'Construire et déployer une solution fonctionnelle dans votre environnement réel.'},
+  {title:'Livrer rapidement',desc:'Construire et déployer une solution fonctionnelle dans votre environnement réel en quelques semaines.'},
   {title:'Vous rendre autonome',desc:'Former votre équipe. Le système vous appartient. Pas de dépendance.'},
 ],
 diffTitle:'Pourquoi Intelart ?',
@@ -162,60 +162,57 @@ timeline:[
   {year:'2020',text:'Sales Engineer chez Intelcia Digital Advertising — média planning TV (BFM, RMC), gestion de groupes (Havas Media, Publicis, GroupeM), campagnes Google & Social.'},
   {year:'2022',text:'Key Account & Export Manager chez Automium — grands comptes B2B, commerce de gros, prospection internationale. Adoption précoce des LLMs (ChatGPT) pour le business development.'},
   {year:'2024',text:'Fondation d\'Intelart à Ottawa — premiers projets d\'automatisation IA pour PME B2B canadiennes.'},
-  {year:'2025',text:'Structuration de l\'offre Sprint IA. Spécialisation : résultats concrets en 10 jours.'},
-  {year:'2026',text:'Lancement d\'OpenClaw — technologie d\'agents IA propriétaire. Expansion marchés francophones.'}
+  {year:'2025',text:'Structuration de l\'offre Déploiement IA. Spécialisation : résultats concrets et mesurables pour PME de services.'},
+  {year:'2026',text:'Lancement de la technologie d\'agents IA dédiés. Expansion marchés francophones.'}
 ],
 ctaH2:'Discutons de votre situation', ctaSub:'20 minutes pour voir si l\'IA peut concrètement vous faire gagner du temps. Sans engagement.', ctaBtn:'Réserver un échange',
 },
 services: {
-eye:'Nos services', h1:'Ce que nous\nfaisons concrètement',
-intro:'Six services complémentaires, tous orientés résultat. On choisit ensemble ce qui est pertinent pour votre situation.',
+eye:'Nos services', h1:'Captez plus,\nconvertissez mieux',
+intro:'Trois niveaux d\'intervention selon votre besoin. On commence toujours par comprendre où vous perdez des opportunités.',
 items:[
-  {icon:'svc-audit',color:'blue',tag:'Diagnostic',title:'Audit IA et diagnostic opérationnel',desc:'Identifier les tâches répétitives, les pertes de temps et les opportunités concrètes d\'automatisation dans votre fonctionnement actuel.',deliv:'Rapport structuré avec diagnostics, opportunités classées par impact, feuille de route.',more:'offre-audit'},
-  {icon:'svc-struct',color:'cyan',tag:'Structuration',title:'Structuration et optimisation de processus',desc:'Remettre de l\'ordre dans les flux internes, clarifier les étapes, améliorer le suivi et réduire les frictions qui ralentissent.',deliv:'Documentation des processus, modèles opérationnels ajustés, guide d\'intégration IA.',more:'offre-sprint'},
-  {icon:'svc-auto',color:'blue',tag:'Automatisation',title:'Automatisation simple et utile',desc:'Mettre en place des automatisations pragmatiques qui réduisent le travail manuel sans créer d\'usine à gaz.',deliv:'Système automatisé testé, documentation des flux, formation de votre équipe.',more:'offre-sprint'},
-  {icon:'svc-ia',color:'green',tag:'IA opérationnelle',title:'Mise en place d\'un premier système IA',desc:'Concevoir et déployer un premier usage IA opérationnel, concret et compréhensible. Pas une démo — un système qui tourne.',deliv:'Système IA déployé, démo enregistrée, plan de déploiement et protocole d\'amélioration.',more:'offre-sprint'},
-  {icon:'svc-accom',color:'cyan',tag:'Accompagnement',title:'Accompagnement d\'implémentation',desc:'Aider l\'entreprise à stabiliser, améliorer et faire évoluer les premières briques mises en place.',deliv:'Suivi hebdomadaire, révisions, nouvelles automatisations, support réactif.',more:'offre-consulting'},
-  {icon:'svc-consult',color:'blue',tag:'Conseil',title:'Conseil en transformation digitale orientée IA',desc:'Aider les dirigeants à faire les bons choix technologiques sans se perdre dans le bruit du marché.',deliv:'Plan stratégique d\'intégration IA, feuille de route, architecture cible validée.',more:'offre-consulting'},
+  {icon:'svc-audit',color:'blue',tag:'Comprendre',title:'Diagnostic IA orienté ROI',desc:'Identifier où vous perdez des demandes, du temps de réponse et des opportunités de conversion. Chaque recommandation est classée par retour sur investissement.',deliv:'Rapport avec opportunités classées par ROI, feuille de route priorisée, budget estimatif.',more:'offre-audit'},
+  {icon:'svc-ia',color:'green',tag:'Déployer',title:'Déploiement IA prioritaire',desc:'On cible le levier le plus rentable — qualification de leads, relances, prise de rendez-vous — et on le met en production rapidement.',deliv:'Système IA en production, formation équipe, indicateurs de suivi.',more:'offre-sprint'},
+  {icon:'svc-accom',color:'cyan',tag:'Accompagner',title:'Accompagnement et IA interne sur mesure',desc:'Stabiliser les premiers résultats, déployer de nouveaux cas d\'usage, construire un assistant IA dédié à vos besoins récurrents.',deliv:'Suivi régulier, nouvelles automatisations, agent IA personnalisé si pertinent.',more:'offre-consulting'},
 ],
-ctaH2:'Un service vous correspond ?', ctaSub:'Parlons de votre situation et voyons ce qui est pertinent.', ctaBtn:'Réserver un échange de 20 minutes',
+ctaH2:'Par où commencer ?', ctaSub:'20 minutes pour identifier vos pertes et le meilleur point d\'entrée.', ctaBtn:'Demander une démo',
 },
 offers: {
-eye:'Nos offres', h1:'Un sprint court,\nun résultat concret',
-intro:'Pas de projet long et coûteux dès le départ. On commence par quelque chose de petit et utile, puis on décide ensemble de la suite.',
-badges:['Offre principale','1 à 2 semaines'],
-mainTitle:'Sprint IA de structuration\net d\'automatisation',
-mainDesc:'En 1 à 2 semaines, nous aidons les PME B2B à réduire les tâches manuelles répétitives, mieux structurer leur fonctionnement, et mettre en place un premier système IA simple, utile et concret.',
+eye:'Nos offres', h1:'Un cas d\'usage prioritaire,\nun résultat rapide',
+intro:'On ne lance pas un projet IA flou. On cible le levier le plus rentable, on le déploie rapidement, et on mesure le résultat.',
+badges:['Offre d\'entrée','Déploiement rapide'],
+mainTitle:'Déploiement IA prioritaire\npour PME de services',
+mainDesc:'On identifie votre cas d\'usage le plus rentable — qualification de leads, relances, prise de rendez-vous — et on le met en production en quelques semaines. Résultat mesurable, sans projet lourd.',
 blocks:[
-  {title:'Pour qui',items:['PME B2B avec des tâches répétitives','Structures avec suivi interne peu organisé','Entreprises voulant un premier résultat concret','Sans vouloir lancer un projet lourd dès le départ'],type:'dot'},
-  {title:'Ce que comprend le sprint',items:['Audit ciblé de votre workflow actuel','Cadrage du besoin prioritaire','Choix du cas d\'usage le plus utile','Première automatisation ou système IA concret','Restitution claire avec prochaines étapes'],type:'check'},
-  {title:'Ce que vous obtenez',items:['Un diagnostic utile de votre situation','Un périmètre clair et validé','Un premier livrable concret et fonctionnel','Une base simple pour continuer ensuite'],type:'check'},
+  {title:'Pour qui',items:['PME de services qui perdent des demandes clients','Équipes commerciales débordées par le traitement manuel','Entreprises qui veulent un premier résultat IA rentable','Dirigeants qui veulent tester avant de s\'engager'],type:'dot'},
+  {title:'Ce qui est inclus',items:['Diagnostic de vos flux et identification des pertes','Cadrage du cas d\'usage prioritaire','Déploiement du système IA en production','Formation de votre équipe + indicateurs de suivi'],type:'check'},
+  {title:'Ce que vous obtenez',items:['Un diagnostic clair de vos pertes d\'opportunités','Un système IA fonctionnel en production','Des indicateurs pour mesurer le retour','Une base pour aller plus loin si pertinent'],type:'check'},
   {title:'Ce que ce n\'est pas',items:['Pas une transformation complète immédiate','Pas un projet technique lourd','Pas une promesse d\'automatisation totale','Pas un engagement long terme obligatoire'],type:'cross'},
 ],
-ctaH3:'Prêt à tester l\'IA sur un cas concret ?',
-ctaSub:'Prenons 20 minutes pour voir si votre situation est un bon candidat.',
-ctaBtn:'Réserver un échange de 20 minutes',
-micro:'Pas d\'engagement long terme. Diagnostic inclus.',
-reassure:'Nous nous engageons sur un résultat concret en 1-2 semaines. Votre diagnostic initial est sans engagement.',
+ctaH3:'Prêt à capter plus d\'opportunités ?',
+ctaSub:'20 minutes pour identifier vos pertes et voir si l\'IA peut y répondre.',
+ctaBtn:'Demander une démo',
+micro:'Sans engagement. Diagnostic inclus.',
+reassure:'On s\'engage sur un résultat concret et mesurable. Votre diagnostic initial est gratuit et sans engagement.',
 faqTitle:'Questions fréquentes',
 faqs:[
-  {q:'Nous ne sommes pas une tech company. L\'IA, c\'est vraiment pour nous ?',a:'L\'IA n\'est pas réservée aux technologues. C\'est un outil pour traiter plus d\'information, plus vite, sans augmenter votre équipe. Votre métier ne change pas. Votre façon de traiter l\'information s\'améliore.'},
-  {q:'Ça prend des mois à mettre en place. Nous n\'avons pas le temps.',a:'Un Sprint IA, c\'est 1-2 semaines. Pas 6 mois. On cible un problème précis, pas une "transformation numérique" générale. Vous voyez les résultats, ensuite vous décidez.'},
+  {q:'Nous ne sommes pas une tech company. L\'IA, c\'est vraiment pour nous ?',a:'Justement. L\'IA est un outil pour traiter plus de demandes, répondre plus vite et convertir davantage — sans compétences techniques. Votre métier ne change pas, votre capacité augmente.'},
+  {q:'Combien de temps ça prend ?',a:'Quelques semaines selon le périmètre. On cible un cas d\'usage précis, pas une transformation complète. Vous voyez les résultats rapidement, ensuite vous décidez.'},
   {q:'Et si ça ne fonctionne pas avec nos données ?',a:'On teste avant de déployer. Vous fournissez un échantillon réel. On valide que le système fonctionne sur votre contexte exact. S\'il y a un problème, on l\'ajuste sur place.'},
-  {q:'Après le Sprint, vous partez. On fait comment ensuite ?',a:'Après le Sprint, vous avez un système, une documentation, et une équipe formée. Le système n\'est pas une boîte noire. C\'est du code et du processus que vos gens comprennent.'},
+  {q:'Après le déploiement, on fait comment ?',a:'Vous avez un système fonctionnel, une documentation et une équipe formée. Si vous voulez aller plus loin, on propose un accompagnement. Mais aucune obligation.'},
 ],
 posTitle:'Pourquoi Intelart plutôt qu\'en interne ou un grand cabinet ?',
-posBody:'Un grand cabinet livrera un rapport. Faire ça en interne requiert du temps et des compétences rares. Intelart : on évalue votre problème, on livre un système qui tourne en 2 semaines, on forme vos équipes, vous décidez sur des résultats réels.',
-secoTitle:'Suites possibles', secoSub:'Après le premier sprint, si cela devient pertinent :',
+posBody:'Un grand cabinet livrera un rapport. Faire ça en interne requiert du temps et des compétences rares. Intelart : on identifie vos pertes, on déploie un système qui tourne, on forme vos équipes, vous décidez sur des résultats réels.',
+secoTitle:'Suites possibles', secoSub:'Après le premier déploiement, si cela devient pertinent :',
 secoItems:[
-  {tag:'Continuité',title:'Accompagnement d\'implémentation',desc:'Stabiliser, améliorer et faire évoluer les premières briques.'},
-  {tag:'Extension',title:'Automatisations complémentaires',desc:'Identifier et automatiser d\'autres flux à valeur ajoutée.'},
-  {tag:'Avancé',title:'Assistant interne / Agent IA',desc:'Mettre en place un agent IA interne si le besoin le justifie.'},
+  {tag:'Continuité',title:'Accompagnement continu',desc:'Stabiliser les résultats et déployer de nouveaux cas d\'usage.'},
+  {tag:'Extension',title:'Automatisations complémentaires',desc:'Identifier et automatiser d\'autres flux à forte valeur ajoutée.'},
+  {tag:'Avancé',title:'Agent IA interne dédié',desc:'Un assistant IA conçu sur mesure pour vos besoins récurrents complexes.'},
 ],
 },
 contact: {
-eye:'Contact', h1:'Parlons de\nvotre besoin',
-intro:'Vous voulez voir si cette offre est adaptée à votre entreprise ? Prenons 20 minutes pour en parler.',
+eye:'Contact', h1:'Parlons de vos\nopportunités perdues',
+intro:'Vous perdez des demandes, du temps de réponse ou des opportunités de conversion ? Prenons 20 minutes pour identifier les leviers IA les plus rentables pour votre entreprise.',
 h2:'Prendre contact', sub:'Pas de formulaire qui va dans un vide. Vous recevrez une réponse sous 24 heures ouvrables.',
 info:[
   {icon:'mail',label:'Email',val:'contact@intelart.ca',href:'mailto:contact@intelart.ca'},
@@ -230,7 +227,7 @@ formSub:'Décrivez brièvement votre situation et nous reviendrons vers vous rap
 fn:'Prénom',ln:'Nom',em:'Email professionnel',co:'Entreprise',nd:'Votre besoin principal',msg:'Message',
 submitBtn:'Envoyer le message', sendingBtn:'Envoi en cours...',
 successMsg:'✓ Message envoyé avec succès ! Nous vous répondrons sous 24 heures ouvrables.',
-selectOpts:['Sélectionner...','Réduire les tâches manuelles répétitives','Structurer mes processus internes','Mettre en place un premier système IA','Automatiser un flux spécifique','Conseil en transformation digitale','Autre / je ne sais pas encore'],
+selectOpts:['Sélectionner...','Capter et qualifier plus de demandes clients','Réduire mon temps de réponse aux prospects','Automatiser le suivi et les relances','Comprendre où l\'IA peut m\'aider (diagnostic)','Déployer un agent IA interne','Autre / je ne sais pas encore'],
 taph:'Décrivez brièvement votre situation, votre activité, et ce que vous cherchez à améliorer.',
 errRequired:'Ce champ est requis',
 errEmail:'Veuillez entrer un email valide',
@@ -240,7 +237,7 @@ tagline:'Solutions IA concrètes et opérationnelles pour PME B2B au Canada.',
 cta:'Réserver un échange',
 navTitle:'Navigation', svcTitle:'Services', ctTitle:'Contact',
 navLinks:[{l:'Accueil',p:'home'},{l:'À propos',p:'about'},{l:'Services',p:'services'},{l:'Offres',p:'offers'},{l:'Contact',p:'contact'}],
-svcLinks:['Audit IA','Structuration','Automatisation','Systèmes IA','Accompagnement','Consulting'],
+svcLinks:['Diagnostic IA','Déploiement IA','Conseil stratégique','Agent IA dédié','Sur mesure'],
 ctLinks:['contact@intelart.ca','+1 613 261 8709','Ottawa, Canada','Réserver un rendez-vous'],
 copy:'© 2026 Intelart. Tous droits réservés.',
 right:'Ottawa, Canada · Solutions IA pour PME B2B',
@@ -251,12 +248,12 @@ painTitle:'Vous reconnaissez-vous ?',
 delivTitle:'Ce qu\'on livre',
 beforeLabel:'Avant',afterLabel:'Après',
 processTitle:'Comment ça marche',
-procSteps:[{day:'Jour 1',title:'Cadrage',icon:'scope'},{day:'J 2–3',title:'Diagnostic',icon:'diag'},{day:'J 4–6',title:'Prototype',icon:'build'},{day:'J 7–10',title:'Livraison',icon:'deliver'}],
+procSteps:[{day:'Semaine 1',title:'Cadrage',icon:'scope'},{day:'S 1–2',title:'Diagnostic',icon:'diag'},{day:'S 2–3',title:'Construction',icon:'build'},{day:'S 3–4',title:'Livraison',icon:'deliver'}],
 ctaCal:'Réserver un échange gratuit de 20 min',
-ctaPay:'Démarrer maintenant — 5 000 $CA',
+ctaPay:'Demander une démo',
 trustBadges:['🔒 Paiement sécurisé SSL','↩ Remboursé si insatisfait 48h','🇨🇦 Ottawa, Canada'],
 faqTitle:'Questions fréquentes',
-ctaH2:'Prêt à automatiser votre quotidien ?',ctaSub:'20 minutes pour voir si votre situation est un bon candidat.',ctaFinal:'Réserver un échange gratuit',
+ctaH2:'Prêt à capter plus d\'opportunités ?',ctaSub:'20 minutes pour identifier vos pertes et voir si l\'IA peut y répondre.',ctaFinal:'Demander une démo',
 list: {
   recrutement:{
     h1:'Qualifiez 3x plus de candidats\nsans agrandir votre équipe',
@@ -273,7 +270,7 @@ list: {
     faqs:[
       {q:'On utilise déjà un ATS, ça va fonctionner avec ?',a:'Oui. On s\'intègre à vos outils existants — pas de remplacement forcé. L\'IA vient en complément de votre ATS.'},
       {q:'Est-ce que l\'IA peut vraiment comprendre nos critères métier ?',a:'On configure les critères ensemble lors du cadrage. L\'IA apprend vos grilles d\'évaluation spécifiques.'},
-      {q:'Combien de temps pour mettre ça en place ?',a:'Un Sprint IA de 10 jours. Vous avez un système fonctionnel et votre équipe formée à la fin.'}
+      {q:'Combien de temps pour mettre ça en place ?',a:'Entre 2 et 4 semaines avec le Déploiement IA. Vous avez un système fonctionnel et votre équipe formée à la fin.'}
     ]
   },
   finance:{
@@ -327,7 +324,7 @@ list: {
     faqs:[
       {q:'Je travaille seul(e) — c\'est fait pour moi aussi ?',a:'Justement. C\'est quand on est seul que l\'automatisation a le plus d\'impact. L\'IA fait le travail d\'un assistant.'},
       {q:'Est-ce que ça s\'intègre avec mes outils immobiliers actuels ?',a:'Oui. On s\'adapte à vos outils (Centris, MLS, etc.) et on construit par-dessus.'},
-      {q:'Combien de temps ça prend à configurer ?',a:'10 jours maximum avec le Sprint IA. Votre système est fonctionnel et votre équipe formée.'}
+      {q:'Combien de temps ça prend à configurer ?',a:'Entre 2 et 4 semaines avec le Déploiement IA. Votre système est fonctionnel et votre équipe formée.'}
     ]
   },
   juridique:{
@@ -369,40 +366,40 @@ list: {
 }
 },
 offreSprint: {
-tags:['Offre phare','1 à 2 semaines','Livré en 10 jours'],
-h1:'Sprint IA — Un système IA\nfonctionnel livré en 10 jours',
-sub:'On trouve votre meilleur cas d\'usage, on le construit et on vous le livre clé en main — avec docs et formation. Pas de pilote qui traîne, pas d\'engagement longue durée. Résultat garanti ou on recommence.',
-incTitle:'Ce que comprend le Sprint',
+tags:['Offre d\'entrée','Déploiement rapide','Résultat mesurable'],
+h1:'Déploiement IA prioritaire —\nVotre premier cas d\'usage rentable',
+sub:'On identifie le levier le plus rentable pour votre entreprise — qualification, relances, rendez-vous — et on le met en production en quelques semaines. Pas de pilote qui traîne, pas d\'engagement longue durée.',
+incTitle:'Ce qui est inclus',
 includes:[
-  {title:'Audit ciblé de votre workflow actuel',desc:'Analyse de vos processus pour trouver les opportunités.'},
-  {title:'Cadrage du besoin prioritaire',desc:'On identifie ensemble le cas d\'usage le plus impactant.'},
-  {title:'Choix du cas d\'usage le plus utile et réaliste',desc:'Faisabilité + impact, pas de promesses creuses.'},
-  {title:'Construction d\'une première automatisation ou système IA',desc:'Un livrable concret, pas un PowerPoint.'},
-  {title:'Restitution avec documentation et prochaines étapes',desc:'Tout est documenté et transférable à vos équipes.'},
+  {title:'Diagnostic de vos flux et identification des pertes',desc:'Où perdez-vous des demandes, du temps de réponse, des opportunités ?'},
+  {title:'Cadrage du cas d\'usage prioritaire',desc:'On identifie ensemble le levier le plus rentable.'},
+  {title:'Choix du cas d\'usage le plus impactant',desc:'Faisabilité + retour sur investissement, pas de promesses creuses.'},
+  {title:'Déploiement du système IA en production',desc:'Un système qui tourne, pas un prototype.'},
+  {title:'Documentation et prochaines étapes',desc:'Tout est documenté et transférable à vos équipes.'},
   {title:'Formation de votre équipe',desc:'Votre équipe comprend et peut maintenir le système.'}
 ],
 forTitle:'Pour qui c\'est fait',
-forItems:['PME B2B avec des tâches répétitives chronophages','Structures dont le suivi interne manque d\'organisation','Entreprises qui veulent un premier résultat IA concret','Dirigeants qui veulent tester avant de s\'engager','Équipes sans compétences IA en interne','Organisations fatiguées des projets qui s\'éternisent'],
+forItems:['PME de services qui perdent des demandes clients','Équipes commerciales débordées par le traitement manuel','Entreprises qui veulent un premier résultat IA rentable','Dirigeants qui veulent tester avant de s\'engager','Équipes sans compétences IA en interne','Organisations fatiguées des projets qui s\'éternisent'],
 delivTitle:'Ce que vous obtenez à la fin',
-deliverables:['Un diagnostic complet de votre situation','Un système IA fonctionnel et déployé','Une documentation claire et utilisable','Une formation pour votre équipe','Un plan pour les prochaines étapes','Des KPI pour mesurer l\'impact'],
+deliverables:['Un diagnostic clair de vos pertes d\'opportunités','Un système IA fonctionnel en production','Des indicateurs pour mesurer le retour','Une documentation claire et utilisable','Une formation pour votre équipe','Un plan pour les prochaines étapes'],
 price:'5 000 $CA',
-priceSub:'Tout inclus — Résultat concret garanti ou on reprend',
-ctaPay:'Démarrer le Sprint',
-ctaCal:'Réserver un échange gratuit',
+priceSub:'Tout inclus — Résultat mesurable garanti',
+ctaPay:'Démarrer le déploiement',
+ctaCal:'Demander une démo',
 trustBadges:['🔒 Paiement sécurisé SSL','↩ Remboursement sous 48h si insatisfait','🇨🇦 Entreprise canadienne, Ottawa'],
 faqTitle:'Questions fréquentes',
 faqs:[
-  {q:'Combien de temps dure exactement le Sprint ?',a:'Entre 7 et 10 jours ouvrables. On cadre le périmètre ensemble au Jour 1, et on livre au plus tard le Jour 10.'},
-  {q:'Et si mon cas d\'usage ne convient pas à un Sprint ?',a:'On le détecte dès le cadrage au Jour 1. Si votre besoin nécessite un format différent, on vous oriente vers l\'offre adaptée — sans facturer le Sprint.'},
+  {q:'Combien de temps ça prend ?',a:'En général 2 à 4 semaines selon le périmètre. On cadre ensemble dès le départ pour que le planning soit réaliste.'},
+  {q:'Et si mon cas d\'usage nécessite un format différent ?',a:'On le détecte dès le cadrage. Si votre besoin est plus complexe, on vous oriente vers l\'offre adaptée — sans vous facturer.'},
   {q:'Je ne suis pas technique. C\'est un problème ?',a:'Pas du tout. On traduit le technique en langage métier. Votre équipe n\'a pas besoin de coder — elle doit comprendre comment utiliser le système.'},
-  {q:'Qu\'est-ce qui se passe après le Sprint ?',a:'Vous avez un système fonctionnel + documentation + formation. Si vous voulez aller plus loin, on propose un accompagnement d\'implémentation. Mais aucune obligation.'}
+  {q:'Qu\'est-ce qui se passe après ?',a:'Vous avez un système fonctionnel + documentation + formation. Si vous voulez aller plus loin, on propose un accompagnement. Mais aucune obligation.'}
 ],
-ctaH2:'Prêt à voir l\'IA en action sur votre cas ?',ctaSub:'20 minutes pour évaluer si votre situation est un bon candidat.',ctaFinal:'Réserver un échange de 20 minutes'
+ctaH2:'Prêt à capter plus d\'opportunités ?',ctaSub:'20 minutes pour identifier vos pertes et voir si l\'IA peut y répondre.',ctaFinal:'Demander une démo'
 },
 offreAudit: {
 tags:['Diagnostic','3 à 5 jours'],
-h1:'Audit IA — Comprenez avant\nd\'agir',
-sub:'Un diagnostic complet de vos processus avec un rapport d\'opportunités IA classées par impact et une feuille de route priorisée. Le point de départ idéal.',
+h1:'Diagnostic IA — Comprenez\noù vous perdez de l\'argent',
+sub:'Un diagnostic complet de vos flux avec un rapport d\'opportunités IA classées par retour sur investissement et une feuille de route priorisée. Le meilleur point de départ.',
 incTitle:'Ce que comprend l\'Audit',
 includes:[
   {title:'Analyse complète de vos processus actuels',desc:'On passe en revue chaque flux, chaque outil, chaque friction.'},
@@ -430,17 +427,17 @@ ctaH2:'Prêt à avoir une vision claire de vos opportunités IA ?',ctaSub:'On vo
 },
 offreConsulting: {
 tags:['Stratégique','Demi-journée ou journée'],
-h1:'Consulting IA — Décidez\nsur des bases solides',
-sub:'Des sessions stratégiques pour vous aider à faire les bons choix technologiques, construire votre architecture cible et planifier votre déploiement IA.',
+h1:'Conseil IA — Décidez quoi\ndéployer et dans quel ordre',
+sub:'Des sessions de conseil de direction pour identifier les leviers IA les plus rentables, prioriser les déploiements et définir le retour sur investissement attendu.',
 incTitle:'Ce que comprend la session',
 includes:[
-  {title:'Conseil en transformation digitale orientée IA',desc:'Vision claire de ce que l\'IA peut apporter à votre organisation.'},
-  {title:'Aide aux choix technologiques',desc:'Couper à travers le bruit du marché pour des décisions éclairées.'},
-  {title:'Architecture cible et plan de déploiement',desc:'Une roadmap technique réaliste, pas un schéma théorique.'},
-  {title:'Vision claire, décisions éclairées',desc:'Vous repartez avec des réponses concrètes, pas plus de questions.'}
+  {title:'Identification des leviers IA les plus rentables',desc:'Vision claire de ce qui va réellement générer du retour pour votre organisation.'},
+  {title:'Priorisation des déploiements',desc:'Dans quel ordre agir pour maximiser le retour et minimiser le risque.'},
+  {title:'Architecture cible et plan de déploiement',desc:'Un plan réaliste, pas un schéma théorique.'},
+  {title:'ROI attendu par cas d\'usage',desc:'Vous repartez avec des chiffres, pas juste des idées.'}
 ],
 forTitle:'Pour qui c\'est fait',
-forItems:['Dirigeants qui veulent décider sur des bases solides','CTO/CDO qui évaluent les options IA','Équipes de direction en réflexion stratégique','Entreprises en début de transformation digitale'],
+forItems:['Dirigeants qui veulent un plan d\'action clair','Directeurs qui hésitent entre plusieurs projets IA','Équipes de direction qui veulent investir intelligemment','Entreprises qui veulent un avis externe neutre'],
 delivTitle:'Ce que vous obtenez',
 deliverables:['Un plan stratégique d\'intégration IA','Une architecture cible validée','Des recommandations technologiques','Un plan de déploiement à moyen terme','Des critères de sélection d\'outils','Un document de synthèse exploitable'],
 price:'1 200 $CA',
@@ -457,9 +454,9 @@ faqs:[
 ctaH2:'Besoin d\'une vision stratégique claire ?',ctaSub:'Prenons rendez-vous pour cadrer votre besoin.',ctaFinal:'Prendre rendez-vous'
 },
 offreAgent: {
-tags:['Premium','Technologie OpenClaw','Infrastructure dédiée'],
-h1:'Agent IA Personnalisé —\nVotre assistant IA interne',
-sub:'Un agent IA conçu sur mesure, déployé sur votre infrastructure dédiée. Propulsé par la technologie OpenClaw. Pour les entreprises avec des besoins récurrents complexes.',
+tags:['Avancé','Infrastructure dédiée','Sur mesure'],
+h1:'Agent IA dédié —\nVotre assistant interne sur mesure',
+sub:'Un agent IA conçu spécifiquement pour votre entreprise, déployé sur votre infrastructure. Pour les organisations avec des besoins récurrents complexes qui justifient un assistant permanent.',
 incTitle:'Ce qui est inclus',
 includes:[
   {title:'Conception complète de l\'agent selon vos besoins',desc:'Architecture sur mesure, pas de solution générique.'},
@@ -479,10 +476,10 @@ process:[
 price:'Sur devis',
 priceSub:'Projet personnalisé — Chaque agent est unique',
 ctaCal:'Discuter de mon projet',
-trustBadges:['🔧 Technologie OpenClaw','🏗️ Infrastructure dédiée','🇨🇦 Hébergement Canada disponible'],
+trustBadges:['🔧 Conçu sur mesure','🏗️ Infrastructure dédiée','🇨🇦 Hébergement Canada disponible'],
 faqTitle:'Questions fréquentes',
 faqs:[
-  {q:'Qu\'est-ce qu\'OpenClaw exactement ?',a:'OpenClaw est notre technologie propriétaire de création d\'agents IA. Elle permet de construire des assistants sur mesure qui s\'intègrent à vos systèmes existants.'},
+  {q:'Comment est construit l\'agent ?',a:'On utilise notre expertise en construction d\'agents IA sur mesure. L\'agent est conçu spécifiquement pour vos besoins et s\'intègre à vos systèmes existants.'},
   {q:'Mes données restent-elles confidentielles ?',a:'Absolument. L\'agent est déployé sur votre infrastructure ou un cloud dédié. Vos données ne transitent jamais par nos serveurs.'},
   {q:'Combien de temps pour un projet complet ?',a:'Ça dépend de la complexité. Comptez 4 à 8 semaines pour un agent standard. On vous donne une estimation précise après l\'analyse initiale.'},
   {q:'Quelle est la fourchette de prix ?',a:'Chaque projet est unique. On établit un devis détaillé après analyse de vos besoins. Contactez-nous pour un premier échange sans engagement.'}
@@ -527,12 +524,12 @@ ctaH2:'Un besoin spécifique ?',ctaSub:'Remplissez le formulaire ci-dessus ou co
 }
 },
 en: {
-nav: { home:'Home', about:'About', services:'Services', offers:'Offers', secteurs:'Industries', contact:'Contact', cta:'Book a call' },
+nav: { home:'Home', about:'About', services:'Services', offers:'Offers', secteurs:'Industries', contact:'Contact', cta:'Request a demo' },
 ddOffres: [
-{icon:'bolt',label:'AI Sprint',page:'offre-sprint'},
-{icon:'search',label:'AI Audit',page:'offre-audit'},
-{icon:'compass',label:'Consulting',page:'offre-consulting'},
-{icon:'cpu',label:'Custom AI Agent',page:'offre-agent'},
+{icon:'bolt',label:'AI Deployment',page:'offre-sprint'},
+{icon:'search',label:'AI Diagnosis',page:'offre-audit'},
+{icon:'compass',label:'Strategic Advisory',page:'offre-consulting'},
+{icon:'cpu',label:'Dedicated AI Agent',page:'offre-agent'},
 {icon:'custom',label:'Custom Project',page:'offre-surmesure'}
 ],
 ddSecteurs: [
@@ -544,87 +541,87 @@ ddSecteurs: [
 {icon:'heart',label:'Healthcare',page:'secteur-sante'}
 ],
 meta: {
-home:{title:'Intelart — AI Agency for B2B SMBs in Canada',desc:'Automate your processes and deploy a first concrete AI system in 1-2 weeks. B2B SMBs, Ottawa, Canada.',keys:'AI agency Ottawa, SMB automation, artificial intelligence B2B, AI sprint, AI consulting Canada'},
-about:{title:'About — Intelart | Applied AI for B2B SMBs',desc:'Discover Intelart: a direct approach, concrete results in applied AI for B2B SMBs in Canada.',keys:'Intelart, AI agency Ottawa, applied AI SMB, founder, AI team Canada'},
-services:{title:'Services — Intelart | Audit, Automation, AI',desc:'AI Audit, structuring, automation, AI systems, support and consulting. Six concrete services for B2B SMBs.',keys:'AI audit, process automation, AI agent, AI consulting, data structuring, SMB support'},
-offers:{title:'Offers — Intelart | AI Sprint in 1-2 weeks',desc:'AI Sprint, Audit, Consulting, AI Agent and custom projects. Concrete results without heavy projects.',keys:'AI sprint, AI audit, AI consulting, AI agent OpenClaw, custom project, AI pricing SMB'},
-contact:{title:'Contact — Intelart | Let\'s talk about your AI project',desc:'Contact Intelart for a 20-minute call. Response within 24h. Ottawa, Canada.',keys:'contact Intelart, AI appointment, free consultation, Ottawa Canada'},
-'offre-sprint':{title:'AI Sprint — Intelart | First AI system in 10 days',desc:'AI Sprint: audit, scoping, prototype and delivery in 1-2 weeks. Concrete result guaranteed. Ottawa, Canada.'},
-'offre-audit':{title:'AI Audit — Intelart | Diagnosis in 3-5 days',desc:'Complete process audit with impact-ranked AI opportunity report. Prioritized roadmap included.'},
-'offre-consulting':{title:'AI Consulting — Intelart | Strategic sessions',desc:'AI-oriented digital transformation consulting. Target architecture and deployment plan. Ottawa, Canada.'},
-'offre-agent':{title:'Custom AI Agent — Intelart | OpenClaw Technology',desc:'Custom AI agent deployed on your infrastructure. Powered by OpenClaw. Personalized quote.'},
+home:{title:'Intelart — AI Systems for Service SMBs | Ottawa, Canada',desc:'Stop losing client inquiries. Intelart deploys AI systems that capture, qualify and convert your opportunities. B2B SMBs, Ottawa, Canada.',keys:'AI agency Ottawa, lead qualification SMB, sales automation, B2B AI Canada, client inquiry conversion'},
+about:{title:'About — Intelart | Concrete AI for Service SMBs',desc:'Discover Intelart: 6 years in B2B, 3 years of applied AI. Concrete results for service SMBs in Canada.',keys:'Intelart, AI agency Ottawa, applied AI SMB, founder, business results'},
+services:{title:'Services — Intelart | AI Diagnosis, Deployment, Support',desc:'ROI-focused AI diagnosis, priority AI deployment and tailored support. Measurable business results for SMBs.',keys:'AI diagnosis, AI deployment, SMB support, lead qualification, sales automation'},
+offers:{title:'Offers — Intelart | Fast AI Deployment for SMBs',desc:'Priority AI deployment, ROI diagnosis, strategic advisory and custom solutions. Concrete results, no heavy projects.',keys:'fast AI deployment, ROI AI diagnosis, AI advisory SMB, custom AI agent, AI pricing SMB'},
+contact:{title:'Contact — Intelart | Let\'s talk about your lost opportunities',desc:'20-minute call with Intelart. Identify your revenue losses and the most profitable AI levers. Response within 24h.',keys:'contact Intelart, AI appointment, free diagnosis, Ottawa Canada'},
+'offre-sprint':{title:'Priority AI Deployment — Intelart | Fast results',desc:'First AI system deployed in 2-4 weeks. We target the most profitable lever for your business. Ottawa, Canada.'},
+'offre-audit':{title:'AI Diagnosis — Intelart | ROI-ranked opportunities',desc:'Complete process diagnosis with ROI-ranked AI opportunities. Prioritized roadmap included.'},
+'offre-consulting':{title:'AI Advisory — Intelart | Informed strategic decisions',desc:'Executive advisory to decide what to deploy, in what order, and with what expected ROI. Ottawa, Canada.'},
+'offre-agent':{title:'Custom AI Agent — Intelart | Dedicated internal assistant',desc:'Custom AI agent deployed on your infrastructure. Built for your complex recurring needs. Personalized quote.'},
 'offre-surmesure':{title:'Custom Project — Intelart | Tailored solution',desc:'Specific development, complex integration, advanced automation. Free quote within 48h.'},
-'secteur-recrutement':{title:'AI for Recruitment — Intelart',desc:'Qualify 3x more candidates without growing your team. Automated CV sorting and follow-ups.'},
-'secteur-finance':{title:'AI for Financial Services — Intelart',desc:'Automate your client reports and free your advisors. 80% time saved.'},
-'secteur-operations':{title:'AI for Operations — Intelart',desc:'Centralize tracking and eliminate manual errors. Centralized dashboard + smart alerts.'},
-'secteur-immobilier':{title:'AI for Real Estate — Intelart',desc:'Automate client follow-up, never lose a lead again. Automated CRM + personalized follow-ups.'},
-'secteur-juridique':{title:'AI for Legal — Intelart',desc:'Structure your files and never miss a deadline. Alerts + document research assistance.'},
-'secteur-sante':{title:'AI for Healthcare — Intelart',desc:'Less admin, more time for your patients. Appointment automation + reminders + follow-up.'},
+'secteur-recrutement':{title:'AI for Recruitment — Intelart',desc:'Process more applications and follow up faster. Never lose top talent due to slow response.'},
+'secteur-finance':{title:'AI for Financial Services — Intelart',desc:'Automate your client reports and free your advisors for high-value advisory work.'},
+'secteur-operations':{title:'AI for Operations — Intelart',desc:'Centralize tracking, eliminate errors and gain real-time visibility on your flows.'},
+'secteur-immobilier':{title:'AI for Real Estate — Intelart',desc:'Never lose a lead after first contact. Automated follow-up, personalized outreach, zero forgotten.'},
+'secteur-juridique':{title:'AI for Legal — Intelart',desc:'Filter, organize and prioritize your requests and files. Zero missed deadlines.'},
+'secteur-sante':{title:'AI for Healthcare — Intelart',desc:'Reduce no-shows and admin time. More time for your patients.'},
 'logos':{title:'Logo Variants — Intelart',desc:'Intelart logo proposals. 5 SVG variants for review.'},
 'privacy':{title:'Privacy Policy — Intelart',desc:'Intelart privacy policy. Protection of your personal data.',keys:'privacy policy, personal data, PIPEDA, Intelart'}
 },
 home: {
-badge:'AI Agency · Ottawa, Canada',
-h1:'Cut 10h of manual work\nper week — in 10 days',
-sub:'Your teams waste time on low-value tasks. We find your best AI use case, build it and deliver it — in 10 days, no commitment. B2B SMBs in Ottawa and across Canada.',
-cta1:'Book 20 min — free', cta2:'See our offers',
-trust:['6+ years in B2B','3 continents','AI since 2022','Results in 10 days'],
+badge:'AI Systems · Ottawa, Canada',
+h1:'Every missed inquiry\nis lost revenue',
+sub:'Intelart deploys AI systems that respond, qualify, organize and follow up on your client inquiries — so your business responds faster, loses fewer opportunities and scales without hiring.',
+cta1:'Request a demo', cta2:'See use cases',
+trust:['6+ years in B2B','3 continents','AI since 2022','Fast deployment'],
 stats:[
-  {num:'6',suffix:'+',lab:'years of B2B experience',prefix:''},
-  {num:'10',suffix:'',lab:'days to first result',prefix:''},
+  {num:'6',suffix:'+',lab:'years of B2B field experience',prefix:''},
+  {num:'40',suffix:'%',lab:'more conversions',prefix:'+'},
   {num:'3',suffix:'',lab:'international markets',prefix:''},
-  {num:'100',suffix:'%',lab:'execution focus',prefix:''}
+  {num:'100',suffix:'%',lab:'business results focus',prefix:''}
 ],
-probEye:'The reality', probH2:'What really holds you back with AI',
-probIntro:'You know AI can speed up your daily work. But the obstacles are real. Here\'s what our clients face before reaching out.',
+probEye:'The real problem', probH2:'What\'s costing you money every day',
+probIntro:'You\'re not short on inquiries. You\'re short on the capacity to handle them all. Here\'s what our clients face before reaching out.',
 probCta:'See how we address this →',
 probItems:[
-  {icon:'clock',color:'red',title:'Too many options, no direction',desc:'ChatGPT, Copilot, Claude… Everyone talks about AI, but where do you actually start?'},
-  {icon:'loop',color:'red',title:'AI projects drag on forever',desc:'Six months for a pilot, still no decision. AI becomes an expense, not an asset.'},
-  {icon:'team',color:'red',title:'No AI skills in-house',desc:'Hiring an expert? Too expensive and too slow. You need to outsource smartly.'},
-  {icon:'money',color:'red',title:'Fear of wasting money',desc:'Tech changes every 3 months. A pragmatic approach first, infrastructure later.'},
+  {icon:'clock',color:'red',title:'Inquiries left unanswered',desc:'Forms, calls, emails — some of your inbound requests fall through the cracks. Every missed one is a lost client.'},
+  {icon:'loop',color:'red',title:'Leads go cold before callback',desc:'A prospect expects a response in hours, not days. Response time kills more deals than price.'},
+  {icon:'team',color:'red',title:'Too much manual processing',desc:'Your team spends more time entering data, sorting and following up than actually selling or advising.'},
+  {icon:'money',color:'red',title:'Hire to handle the volume?',desc:'You\'re choosing between turning away business and adding headcount. AI lets you scale without growing payroll.'},
 ],
 wwdEye:'Our approach', wwdH2:'What we concretely do',
-wwdSub:'No big speeches. Concrete actions that produce a first visible result.',
+wwdSub:'We don\'t sell technology. We solve a revenue problem.',
 wwdItems:[
-  {num:'01',title:'Bring order back',desc:'Identify friction points, clarify steps, improve process readability.'},
-  {num:'02',title:'Reduce manual tasks',desc:'Target the flows that cost the most time and automate them simply.'},
-  {num:'03',title:'Find the right use case',desc:'Identify what has the most impact for your specific business.'},
-  {num:'04',title:'Ship a first solution',desc:'Deploy a useful automation or first understandable AI system.'},
+  {num:'01',title:'Identify your losses',desc:'Where are you losing inquiries, response time, conversion opportunities?'},
+  {num:'02',title:'Target the most profitable lever',desc:'Which use case will have the biggest impact on your revenue?'},
+  {num:'03',title:'Deploy fast',desc:'A concrete AI system, in production, within weeks.'},
+  {num:'04',title:'Measure the return',desc:'Clear metrics: leads handled, response time, conversion rate.'},
 ],
 procEye:'The method', procH2:'How it works',
-procSub:'4 phases, 10 days maximum. Each step has a clear objective and deliverable.',
+procSub:'Clear scope, fast deployment, measurable results.',
 procSteps:[
-  {day:'Day 1',title:'Scoping',desc:'Objectives, constraints, tools, success criteria.',icon:'scope'},
-  {day:'D 2–3',title:'Diagnosis',desc:'Workflow observation + opportunity identification.',icon:'diag'},
-  {day:'D 4–6',title:'Prototype',desc:'Build + rapid iterations with your team.',icon:'build'},
-  {day:'D 7–10',title:'Delivery',desc:'Demo + docs + deployment plan + KPIs.',icon:'deliver'},
+  {day:'Week 1',title:'Scoping',desc:'Objectives, constraints, tools, success criteria.',icon:'scope'},
+  {day:'W 1–2',title:'Diagnosis',desc:'Workflow mapping + loss identification.',icon:'diag'},
+  {day:'W 2–3',title:'Build',desc:'System deployment + iterations with your team.',icon:'build'},
+  {day:'W 3–4',title:'Delivery',desc:'System in production + training + metrics.',icon:'deliver'},
 ],
-ucEye:'Real examples', ucH2:'AI applied to your industry',
-ucSub:'A few examples of what we deliver in a single AI Sprint.',
+ucEye:'Real results', ucH2:'Results in your industry',
+ucSub:'A few examples of results achieved by our clients.',
 useCases:[
-  {tag:'Recruitment',tagColor:'blue',problem:'3h/day sorting CVs and following up with candidates',solution:'Automatic qualifier + scheduled follow-ups',result:'2x to 3x more files processed',link:'secteur-recrutement',
+  {tag:'Recruitment',tagColor:'blue',problem:'Top candidates lost due to slow response',solution:'Automatic qualification + scheduled follow-ups',result:'3x more applications processed',link:'secteur-recrutement',
    svgBg:'rgba(59,130,246,.06)',svgStroke:'#3B82F6'},
-  {tag:'Financial services',tagColor:'cyan',problem:'Client reports built manually (3-5h/report)',solution:'Auto-generation from internal data',result:'70-80% time saved',link:'secteur-finance',
+  {tag:'Financial services',tagColor:'cyan',problem:'Advisors drowning in admin tasks',solution:'Client reports auto-generated',result:'80% time freed for actual advising',link:'secteur-finance',
    svgBg:'rgba(6,182,212,.06)',svgStroke:'#06B6D4'},
-  {tag:'Operations',tagColor:'green',problem:'Tracking across 3 different tools, frequent errors',solution:'Centralized dashboard + smart alerts',result:'Real-time visibility, errors nearly eliminated',link:'secteur-operations',
+  {tag:'Real estate',tagColor:'green',problem:'60% of leads never followed up after first contact',solution:'Automated tracking + personalized follow-ups',result:'Zero leads forgotten, 2x more showings',link:'secteur-immobilier',
    svgBg:'rgba(16,185,129,.06)',svgStroke:'#10B981'}
 ],
 benEye:'What you get', benH2:'Measurable results',
 benItems:[
-  {icon:'down',label:'Fewer manual tasks',sub:'Targeted & automated'},
-  {icon:'clear',label:'More clarity',sub:'Readable processes'},
-  {icon:'check',label:'Better tracking',sub:'Nothing falls through'},
-  {icon:'ai',label:'Concrete AI system',sub:'In production'},
-  {icon:'next',label:'Base to build on',sub:'Scalable'},
+  {icon:'down',label:'Fewer lost opportunities',sub:'Every inquiry handled'},
+  {icon:'clear',label:'Faster response time',sub:'Automated reactivity'},
+  {icon:'check',label:'Better conversion',sub:'Leads qualified & followed up'},
+  {icon:'ai',label:'More capacity',sub:'Without hiring'},
+  {icon:'next',label:'Foundation to grow',sub:'Scalable'},
 ],
-ctaH2:'Ready to start?', ctaSub:'Book 20 minutes to see if your situation is a good fit. No pitch, no commitment.', ctaBtn:'Book a 20-minute call',
+ctaH2:'Ready to capture more opportunities?', ctaSub:'20 minutes to identify your revenue losses and the most profitable AI levers. No commitment.', ctaBtn:'Book a 20-minute call',
 socialEye:'Client results', socialH2:'They trust us',
 testimonials:[
-  {stars:5,quote:'Thanks to the automation setup, we reduced export lead qualification time by 60%. ROI was visible from month one.',author:'Sales Director',company:'Automium'},
-  {stars:5,quote:'Digitizing our internal processes transformed the way we work. Less paper, fewer errors, and real-time visibility across the entire chain.',author:'Director of Operations',company:'Getcomar'},
-  {stars:5,quote:'Integrating AI into our media planning workflow allowed us to handle 3x more client briefs without growing the team.',author:'Digital Manager',company:'Intelcia Digital Advertising'},
-  {stars:5,quote:'In 10 days, our client follow-ups were automated and our conversion rate jumped 40%. Concrete results, not slides.',author:'CEO',company:'Webfy Corp Limited'}
+  {stars:5,quote:'Thanks to the system deployed, we reduced export lead qualification time by 60%. ROI was visible from month one.',author:'Sales Director',company:'Automium'},
+  {stars:5,quote:'Centralizing our internal flows transformed the way we work. Fewer errors, and real-time visibility across the entire chain.',author:'Director of Operations',company:'Getcomar'},
+  {stars:5,quote:'AI integrated into our workflow let us handle 3x more client requests without growing the team.',author:'Digital Manager',company:'Intelcia Digital Advertising'},
+  {stars:5,quote:'Our client follow-ups are automated and our conversion rate jumped 40%. Concrete results, not slides.',author:'CEO',company:'Webfy Corp Limited'}
 ],
 credBar:['Ottawa, Canada','6+ years in B2B','Ex Havas · Publicis · GroupeM','Bilingual FR/EN','Applied AI since 2022'],
 },
@@ -638,7 +635,7 @@ values:[
   {icon:'bulb',title:'AI must serve the business',desc:'Not tech for tech\'s sake. If it doesn\'t save time or money, we don\'t do it.'},
   {icon:'star',title:'Field before theory',desc:'6 years of B2B sales taught me that only results matter. Not reports.'},
   {icon:'pulse',title:'Start where you are',desc:'No need to be "digital ready." We start from your reality, not an ideal.'},
-  {icon:'tick',title:'Prove before you sell',desc:'A first concrete result in 10 days. Then you decide freely.'},
+  {icon:'tick',title:'Prove before you sell',desc:'A first concrete result in a few weeks. Then you decide freely.'},
 ],
 founderTitle:'From the founder',
 founderText:'I sold, prospected, and managed key accounts for 6 years — in France, Morocco, and Canada. When ChatGPT arrived in late 2022, I immediately saw what AI could change in the daily commercial life of SMBs. Not in 5 years. Now. I automated my own prospecting, then my clients\'. Intelart is that expertise packaged: we take your real operational problems and solve them with AI — quickly, without jargon, with measurable results by week two.',
@@ -647,7 +644,7 @@ wIntro:'We operate in short sprints, with a clear scope from day one. No surpris
 steps:[
   {title:'Listen before proposing',desc:'Understand your real situation — not what you "should" do, but what\'s slowing you down today.'},
   {title:'Target the highest-impact use case',desc:'Identify the task that costs you the most time and can be automated quickly.'},
-  {title:'Deliver in 10 days',desc:'Build and deploy a working solution in your real environment.'},
+  {title:'Deliver fast',desc:'Build and deploy a working solution in your real environment within weeks.'},
   {title:'Make you autonomous',desc:'Train your team. The system is yours. No dependency.'},
 ],
 diffTitle:'Why Intelart?',
@@ -663,60 +660,57 @@ timeline:[
   {year:'2020',text:'Sales Engineer at Intelcia Digital Advertising — TV media planning (BFM, RMC), group management (Havas Media, Publicis, GroupeM), Google & Social campaigns.'},
   {year:'2022',text:'Key Account & Export Manager at Automium — B2B key accounts, wholesale trade, international prospecting. Early adoption of LLMs (ChatGPT) for business development.'},
   {year:'2024',text:'Founded Intelart in Ottawa — first AI automation projects for Canadian B2B SMBs.'},
-  {year:'2025',text:'AI Sprint offer structured. Specialization: concrete results in 10 days.'},
-  {year:'2026',text:'Launch of OpenClaw — proprietary AI agent technology. Francophone market expansion.'}
+  {year:'2025',text:'AI Deployment offer structured. Specialization: concrete, measurable results for service SMBs.'},
+  {year:'2026',text:'Launch of dedicated AI agent technology. Francophone market expansion.'}
 ],
 ctaH2:'Let\'s discuss your situation', ctaSub:'20 minutes to see if AI can concretely save you time. No commitment.', ctaBtn:'Book a call',
 },
 services: {
-eye:'Our services', h1:'What we\nconcretely do',
-intro:'Six complementary services, all results-oriented. We choose together what\'s relevant for your situation.',
+eye:'Our services', h1:'Capture more,\nconvert better',
+intro:'Three levels of intervention based on your needs. We always start by understanding where you\'re losing opportunities.',
 items:[
-  {icon:'svc-audit',color:'blue',tag:'Diagnosis',title:'AI Audit & Operational Diagnosis',desc:'Identify repetitive tasks, time losses, and concrete automation opportunities in your current operations.',deliv:'Structured report with diagnostics, impact-ranked opportunities, action roadmap.',more:'offre-audit'},
-  {icon:'svc-struct',color:'cyan',tag:'Structuring',title:'Process Structuring & Optimization',desc:'Restore order to internal flows, clarify steps, improve tracking, and reduce friction.',deliv:'Process documentation, adjusted operating models, AI integration guide.',more:'offre-sprint'},
-  {icon:'svc-auto',color:'blue',tag:'Automation',title:'Simple, Useful Automation',desc:'Deploy pragmatic automations that reduce manual work without creating complexity.',deliv:'Tested automated system, flow documentation, team training.',more:'offre-sprint'},
-  {icon:'svc-ia',color:'green',tag:'Operational AI',title:'First AI System Deployment',desc:'Design and deploy a first operational, concrete, and understandable AI use case.',deliv:'Deployed AI system, recorded demo, deployment plan and improvement protocol.',more:'offre-sprint'},
-  {icon:'svc-accom',color:'cyan',tag:'Support',title:'Implementation Support',desc:'Help the company stabilize, improve, and evolve the first building blocks.',deliv:'Weekly check-ins, fixes, new automations, reactive support.',more:'offre-consulting'},
-  {icon:'svc-consult',color:'blue',tag:'Advisory',title:'AI-Oriented Digital Transformation Consulting',desc:'Help leaders make the right technology choices without getting lost in noise.',deliv:'Strategic AI integration plan, roadmap, validated target architecture.',more:'offre-consulting'},
+  {icon:'svc-audit',color:'blue',tag:'Understand',title:'ROI-focused AI Diagnosis',desc:'Identify where you\'re losing inquiries, response time and conversion opportunities. Every recommendation is ranked by return on investment.',deliv:'Report with ROI-ranked opportunities, prioritized roadmap, budget estimates.',more:'offre-audit'},
+  {icon:'svc-ia',color:'green',tag:'Deploy',title:'Priority AI Deployment',desc:'We target the most profitable lever — lead qualification, follow-ups, appointment booking — and put it in production fast.',deliv:'AI system in production, team training, tracking metrics.',more:'offre-sprint'},
+  {icon:'svc-accom',color:'cyan',tag:'Support',title:'Ongoing support & custom internal AI',desc:'Stabilize early results, deploy new use cases, build a dedicated AI assistant for your recurring needs.',deliv:'Regular check-ins, new automations, custom AI agent if relevant.',more:'offre-consulting'},
 ],
-ctaH2:'Does a service fit?', ctaSub:'Let\'s talk about your situation and see what\'s relevant.', ctaBtn:'Book a 20-minute call',
+ctaH2:'Where to start?', ctaSub:'20 minutes to identify your losses and the best entry point.', ctaBtn:'Request a demo',
 },
 offers: {
-eye:'Our offers', h1:'A short sprint,\na concrete result',
-intro:'No long, expensive project from day one. We start with something small and useful, then decide together what comes next.',
-badges:['Main offer','1 to 2 weeks'],
-mainTitle:'AI Sprint — Structuring\n& Automation',
-mainDesc:'In 1 to 2 weeks, we help B2B SMBs reduce repetitive manual tasks, better structure their operations, and deploy a first simple, useful, concrete AI system.',
+eye:'Our offers', h1:'One priority use case,\none fast result',
+intro:'We don\'t launch vague AI projects. We target the most profitable lever, deploy it fast, and measure the result.',
+badges:['Entry offer','Fast deployment'],
+mainTitle:'Priority AI deployment\nfor service SMBs',
+mainDesc:'We identify your most profitable use case — lead qualification, follow-ups, appointment booking — and put it in production within weeks. Measurable result, no heavy project.',
 blocks:[
-  {title:'For whom',items:['B2B SMBs with repetitive tasks','Structures with poorly organized tracking','Companies wanting a first concrete result','Without launching a heavy project from day one'],type:'dot'},
-  {title:'What the sprint includes',items:['Targeted audit of your current workflow','Priority need scoping','Choice of most useful use case','First automation or concrete AI system','Clear restitution with next steps'],type:'check'},
-  {title:'What you get',items:['A useful diagnosis of your situation','A clear, validated scope','A first concrete, functional deliverable','A simple base to continue'],type:'check'},
+  {title:'For whom',items:['Service SMBs losing client inquiries','Sales teams overwhelmed by manual processing','Companies wanting a first profitable AI result','Leaders who want to test before committing'],type:'dot'},
+  {title:'What\'s included',items:['Diagnosis of your flows and loss identification','Priority use case scoping','AI system deployment in production','Team training + tracking metrics'],type:'check'},
+  {title:'What you get',items:['A clear diagnosis of your lost opportunities','A working AI system in production','Metrics to measure the return','A foundation to build on if relevant'],type:'check'},
   {title:'What it\'s not',items:['Not an immediate complete transformation','Not a heavy technical project','Not a total automation promise','Not a mandatory long-term commitment'],type:'cross'},
 ],
-ctaH3:'Ready to test AI on a concrete case?',
-ctaSub:'Let\'s take 20 minutes to see if your situation is a good fit.',
-ctaBtn:'Book a 20-minute call',
-micro:'No long-term commitment. Free assessment included.',
-reassure:'We commit to concrete results in 1-2 weeks. Your initial assessment is free and non-binding.',
+ctaH3:'Ready to capture more opportunities?',
+ctaSub:'20 minutes to identify your losses and see if AI can help.',
+ctaBtn:'Request a demo',
+micro:'No commitment. Diagnosis included.',
+reassure:'We commit to concrete, measurable results. Your initial diagnosis is free and non-binding.',
 faqTitle:'Frequently asked questions',
 faqs:[
-  {q:'We\'re not a tech company. Is AI really for us?',a:'AI isn\'t reserved for technologists. It\'s a tool to process more information, faster, without growing your team.'},
-  {q:'This takes months to implement. We don\'t have time.',a:'An AI Sprint is 1-2 weeks. Not 6 months. We target one specific problem. You see results, then decide.'},
+  {q:'We\'re not a tech company. Is AI really for us?',a:'Exactly. AI is a tool to handle more inquiries, respond faster and convert more — no technical skills needed. Your business stays the same, your capacity grows.'},
+  {q:'How long does it take?',a:'A few weeks depending on scope. We target one specific use case, not a full transformation. You see results fast, then decide.'},
   {q:'What if it doesn\'t work with our data?',a:'We test before deploying. You provide a real sample. We validate in your exact context.'},
-  {q:'After the Sprint, you leave. What then?',a:'You have a working system, documentation, and trained team. It\'s code and process your people understand.'},
+  {q:'After deployment, what then?',a:'You have a working system, documentation, and trained team. If you want to go further, we offer ongoing support. But no obligation.'},
 ],
 posTitle:'Why Intelart instead of in-house or a large firm?',
-posBody:'A large firm delivers a report. Building in-house requires rare skills. Intelart: we assess, ship a working system in 2 weeks, train your team, and you decide based on real results.',
-secoTitle:'Possible next steps', secoSub:'After the first sprint, if it becomes relevant:',
+posBody:'A large firm delivers a report. Building in-house requires rare skills. Intelart: we identify your losses, deploy a working system, train your team, and you decide based on real results.',
+secoTitle:'Possible next steps', secoSub:'After the first deployment, if it becomes relevant:',
 secoItems:[
-  {tag:'Continuity',title:'Implementation Support',desc:'Stabilize, improve, and evolve the first building blocks.'},
-  {tag:'Extension',title:'Additional Automations',desc:'Identify and automate other high-value flows.'},
-  {tag:'Advanced',title:'Internal Agent / AI Assistant',desc:'Deploy a more sophisticated internal AI agent if justified.'},
+  {tag:'Continuity',title:'Ongoing support',desc:'Stabilize results and deploy new use cases.'},
+  {tag:'Extension',title:'Additional automations',desc:'Identify and automate other high-value flows.'},
+  {tag:'Advanced',title:'Dedicated internal AI agent',desc:'A custom AI assistant built for your complex recurring needs.'},
 ],
 },
 contact: {
-eye:'Contact', h1:'Let\'s talk about\nyour needs',
-intro:'Want to see if this offer fits your company? Let\'s take 20 minutes to discuss it.',
+eye:'Contact', h1:'Let\'s talk about your\nlost opportunities',
+intro:'Losing client requests, response time, or conversion opportunities? Let\'s take 20 minutes to identify the most profitable AI levers for your business.',
 h2:'Get in touch', sub:'Not a form that goes into a void. You\'ll receive a response within 24 business hours.',
 info:[
   {icon:'mail',label:'Email',val:'contact@intelart.ca',href:'mailto:contact@intelart.ca'},
@@ -731,7 +725,7 @@ formSub:'Briefly describe your situation and we\'ll get back to you quickly.',
 fn:'First name',ln:'Last name',em:'Professional email',co:'Company',nd:'Your main need',msg:'Message',
 submitBtn:'Send message', sendingBtn:'Sending...',
 successMsg:'✓ Message sent successfully! We\'ll reply within 24 business hours.',
-selectOpts:['Select...','Reduce repetitive manual tasks','Structure internal processes','Deploy a first AI system','Automate a specific flow','Digital transformation advisory','Other / not sure yet'],
+selectOpts:['Select...','Capture and qualify more client requests','Reduce my response time to prospects','Automate follow-ups and reminders','Understand where AI can help (diagnostic)','Deploy a dedicated AI agent','Other / not sure yet'],
 taph:'Briefly describe your situation, your business, and what you\'re looking to improve.',
 errRequired:'This field is required',
 errEmail:'Please enter a valid email',
@@ -741,7 +735,7 @@ tagline:'Concrete, operational AI solutions for B2B SMBs in Canada.',
 cta:'Book a call',
 navTitle:'Navigation', svcTitle:'Services', ctTitle:'Contact',
 navLinks:[{l:'Home',p:'home'},{l:'About',p:'about'},{l:'Services',p:'services'},{l:'Offers',p:'offers'},{l:'Contact',p:'contact'}],
-svcLinks:['AI Audit','Structuring','Automation','AI Systems','Support','Consulting'],
+svcLinks:['AI Diagnostic','AI Deployment','Strategic Consulting','Dedicated AI Agent','Custom'],
 ctLinks:['contact@intelart.ca','+1 613 261 8709','Ottawa, Canada','Book a call'],
 copy:'© 2026 Intelart. All rights reserved.',
 right:'Ottawa, Canada · AI Solutions for B2B SMBs',
@@ -752,12 +746,12 @@ painTitle:'Sound familiar?',
 delivTitle:'What we deliver',
 beforeLabel:'Before',afterLabel:'After',
 processTitle:'How it works',
-procSteps:[{day:'Day 1',title:'Scoping',icon:'scope'},{day:'D 2–3',title:'Diagnosis',icon:'diag'},{day:'D 4–6',title:'Prototype',icon:'build'},{day:'D 7–10',title:'Delivery',icon:'deliver'}],
+procSteps:[{day:'Week 1',title:'Scoping',icon:'scope'},{day:'W 1–2',title:'Diagnosis',icon:'diag'},{day:'W 2–3',title:'Build',icon:'build'},{day:'W 3–4',title:'Delivery',icon:'deliver'}],
 ctaCal:'Book a free 20-min call',
-ctaPay:'Start now — 5 000 $CA',
+ctaPay:'Request a demo',
 trustBadges:['🔒 Secure SSL payment','↩ Refund within 48h if unsatisfied','🇨🇦 Ottawa, Canada'],
 faqTitle:'Frequently asked questions',
-ctaH2:'Ready to automate your daily work?',ctaSub:'20 minutes to see if your situation is a good fit.',ctaFinal:'Book a free call',
+ctaH2:'Ready to capture more opportunities?',ctaSub:'20 minutes to identify your losses and see if AI can help.',ctaFinal:'Request a demo',
 list: {
   recrutement:{
     h1:'Qualify 3x more candidates\nwithout growing your team',
@@ -774,7 +768,7 @@ list: {
     faqs:[
       {q:'We already use an ATS — will it work with it?',a:'Yes. We integrate with your existing tools — no forced replacement. AI complements your ATS.'},
       {q:'Can AI really understand our specific job criteria?',a:'We configure criteria together during scoping. AI learns your specific evaluation grids.'},
-      {q:'How long to set this up?',a:'A 10-day AI Sprint. You have a working system and trained team at the end.'}
+      {q:'How long to set this up?',a:'2 to 4 weeks with the AI Deployment offer. You get a working system and trained team at the end.'}
     ]
   },
   finance:{
@@ -870,26 +864,26 @@ list: {
 }
 },
 offreSprint: {
-tags:['Flagship offer','1 to 2 weeks','Delivered in 10 days'],
-h1:'AI Sprint — A working AI\nsystem delivered in 10 days',
-sub:'We find your best use case, build it and deliver it turnkey — with docs and training. No dragging pilot, no long-term lock-in. Results guaranteed or we redo it.',
-incTitle:'What the Sprint includes',
+tags:['Entry offer','Fast deployment','Measurable result'],
+h1:'Priority AI Deployment —\nYour first profitable use case',
+sub:'We identify the most profitable lever for your business — qualification, follow-ups, appointments — and put it in production within weeks. No dragging pilot, no long-term lock-in.',
+incTitle:'What\'s included',
 includes:[
-  {title:'Targeted audit of your current workflow',desc:'Process analysis to find opportunities.'},
-  {title:'Priority need scoping',desc:'We identify together the highest-impact use case.'},
-  {title:'Most useful and realistic use case selection',desc:'Feasibility + impact, no empty promises.'},
-  {title:'Building a first automation or AI system',desc:'A concrete deliverable, not a PowerPoint.'},
-  {title:'Restitution with documentation and next steps',desc:'Everything documented and transferable.'},
+  {title:'Flow diagnosis and loss identification',desc:'Where are you losing inquiries, response time, opportunities?'},
+  {title:'Priority use case scoping',desc:'We identify together the most profitable lever.'},
+  {title:'Most impactful use case selection',desc:'Feasibility + ROI, no empty promises.'},
+  {title:'AI system deployment in production',desc:'A working system, not a prototype.'},
+  {title:'Documentation and next steps',desc:'Everything documented and transferable.'},
   {title:'Team training',desc:'Your team understands and can maintain the system.'}
 ],
 forTitle:'Who it\'s for',
-forItems:['B2B SMBs with time-consuming repetitive tasks','Structures with poorly organized tracking','Companies wanting a first concrete AI result','Leaders who want to test before committing','Teams without in-house AI skills','Organizations tired of never-ending projects'],
+forItems:['Service SMBs losing client inquiries','Sales teams overwhelmed by manual processing','Companies wanting a first profitable AI result','Leaders who want to test before committing','Teams without in-house AI skills','Organizations tired of never-ending projects'],
 delivTitle:'What you get at the end',
-deliverables:['A complete diagnosis of your situation','A functional, deployed AI system','Clear, usable documentation','Training for your team','A plan for next steps','KPIs to measure impact'],
+deliverables:['A clear diagnosis of your lost opportunities','A working AI system in production','Metrics to measure the return','Clear, usable documentation','Training for your team','A plan for next steps'],
 price:'5 000 $CA',
-priceSub:'All included — Concrete result guaranteed or we redo it',
-ctaPay:'Start the Sprint',
-ctaCal:'Book a free call',
+priceSub:'All included — Measurable result guaranteed',
+ctaPay:'Start deployment',
+ctaCal:'Request a demo',
 trustBadges:['🔒 Secure SSL payment','↩ Refund within 48h if unsatisfied','🇨🇦 Canadian company, Ottawa'],
 faqTitle:'Frequently asked questions',
 faqs:[
@@ -902,9 +896,9 @@ ctaH2:'Ready to see AI in action on your case?',ctaSub:'20 minutes to assess if 
 },
 offreAudit: {
 tags:['Diagnostic','3 to 5 days'],
-h1:'AI Audit — Understand before\nyou act',
-sub:'A complete diagnosis of your processes with an impact-ranked AI opportunity report and a prioritized roadmap. The ideal starting point.',
-incTitle:'What the Audit includes',
+h1:'AI Diagnostic — Understand\nwhere you\'re losing money',
+sub:'A complete diagnosis of your flows with an AI opportunity report ranked by ROI and a prioritized roadmap. The best starting point.',
+incTitle:'What the Diagnostic includes',
 includes:[
   {title:'Complete analysis of your current processes',desc:'We review every flow, every tool, every friction point.'},
   {title:'Interviews with your key team members',desc:'We listen to those doing the work daily.'},
@@ -917,31 +911,31 @@ delivTitle:'What you get at the end',
 deliverables:['A complete structured report','A process mapping of your operations','Opportunities ranked by impact and feasibility','An actionable roadmap','Neutral technology recommendations','A budget estimate per opportunity'],
 price:'2 500 $CA',
 priceSub:'Delivered in 3 to 5 days — Complete report included',
-ctaPay:'Order the audit',
+ctaPay:'Order the diagnostic',
 ctaCal:'Learn more',
 trustBadges:['🔒 Secure SSL payment','↩ Refund within 48h if unsatisfied','🇨🇦 Canadian company, Ottawa'],
 faqTitle:'Frequently asked questions',
 faqs:[
-  {q:'Does the audit force me to buy anything else?',a:'No. The report is a standalone deliverable. You can use it internally or with another provider. No obligation.'},
+  {q:'Does the diagnostic force me to buy anything else?',a:'No. The report is a standalone deliverable. You can use it internally or with another provider. No obligation.'},
   {q:'How much time does it take on my team\'s side?',a:'We need 2-3 hours of interviews total with your key team members. The rest is on us.'},
-  {q:'Does the audit also cover existing tools?',a:'Yes. We evaluate your current tools and how AI can integrate — or replace them if relevant.'},
-  {q:'Can I then move to the AI Sprint?',a:'Absolutely. The audit is the ideal starting point for a Sprint. The audit price is often deducted if you proceed.'}
+  {q:'Does the diagnostic also cover existing tools?',a:'Yes. We evaluate your current tools and how AI can integrate — or replace them if relevant.'},
+  {q:'Can I then move to the AI Deployment?',a:'Absolutely. The diagnostic is the ideal starting point. The diagnostic price is often deducted if you proceed.'}
 ],
 ctaH2:'Ready for a clear view of your AI opportunities?',ctaSub:'We deliver a complete diagnosis in 3 to 5 days.',ctaFinal:'Book a call'
 },
 offreConsulting: {
 tags:['Strategic','Half-day or full day'],
-h1:'AI Consulting — Decide\non solid ground',
-sub:'Strategic sessions to help you make the right technology choices, build your target architecture, and plan your AI deployment.',
+h1:'AI Consulting — Decide what\nto deploy and in what order',
+sub:'Executive-level advisory sessions to identify the most profitable AI levers, prioritize deployments, and define expected ROI.',
 incTitle:'What the session includes',
 includes:[
-  {title:'AI-oriented digital transformation consulting',desc:'Clear vision of what AI can bring to your organization.'},
-  {title:'Technology choice guidance',desc:'Cut through market noise for informed decisions.'},
-  {title:'Target architecture and deployment plan',desc:'A realistic technical roadmap, not a theoretical diagram.'},
-  {title:'Clear vision, informed decisions',desc:'You leave with concrete answers, not more questions.'}
+  {title:'Identification of the most profitable AI levers',desc:'Clear vision of what will actually generate returns for your organization.'},
+  {title:'Deployment prioritization',desc:'In what order to act for maximum return and minimum risk.'},
+  {title:'Target architecture and deployment plan',desc:'A realistic plan, not a theoretical diagram.'},
+  {title:'Expected ROI per use case',desc:'You leave with numbers, not just ideas.'}
 ],
 forTitle:'Who it\'s for',
-forItems:['Leaders who want to decide on solid ground','CTOs/CDOs evaluating AI options','Executive teams in strategic reflection','Companies starting their digital transformation'],
+forItems:['Leaders who want a clear action plan','Directors hesitating between multiple AI projects','Executive teams who want to invest wisely','Companies wanting a neutral external perspective'],
 delivTitle:'What you get',
 deliverables:['A strategic AI integration plan','A validated target architecture','Technology recommendations','A medium-term deployment plan','Tool selection criteria','An actionable synthesis document'],
 price:'1 200 $CA',
@@ -950,7 +944,7 @@ ctaCal:'Book an appointment',
 trustBadges:['🇨🇦 Based in Ottawa, Canada','🤝 No commitment','📋 Summary delivered after each session'],
 faqTitle:'Frequently asked questions',
 faqs:[
-  {q:'What\'s the difference between consulting and audit?',a:'The audit analyzes your existing processes. Consulting goes further: strategy, target architecture, tool selection, and medium-term deployment plan.'},
+  {q:'What\'s the difference between consulting and diagnostic?',a:'The diagnostic analyzes your existing processes. Consulting goes further: strategy, target architecture, tool selection, and medium-term deployment plan.'},
   {q:'How many sessions should I plan?',a:'Depends on complexity. For initial strategic framing, one full-day session often suffices. For deeper guidance, 2-3 spaced sessions.'},
   {q:'Do you also sell implementation afterwards?',a:'We can, but it\'s not mandatory. Consulting is a standalone service. If you implement in-house, our recommendations remain valid.'},
   {q:'What\'s the exact format?',a:'In person in Ottawa or via video call. We start with a framing brief, then collaborative work on your specific challenges.'}
@@ -958,9 +952,9 @@ faqs:[
 ctaH2:'Need a clear strategic vision?',ctaSub:'Let\'s book a call to scope your needs.',ctaFinal:'Book an appointment'
 },
 offreAgent: {
-tags:['Premium','OpenClaw Technology','Dedicated Infrastructure'],
-h1:'Custom AI Agent —\nYour internal AI assistant',
-sub:'A custom-built AI agent deployed on your dedicated infrastructure. Powered by OpenClaw technology. For companies with complex recurring needs.',
+tags:['Advanced','Dedicated infrastructure','Custom'],
+h1:'Dedicated AI Agent —\nYour custom internal assistant',
+sub:'An AI agent designed specifically for your business, deployed on your infrastructure. For organizations with complex recurring needs that justify a permanent assistant.',
 incTitle:'What\'s included',
 includes:[
   {title:'Complete agent design based on your needs',desc:'Custom architecture, not a generic solution.'},
@@ -980,13 +974,13 @@ process:[
 price:'Custom quote',
 priceSub:'Personalized project — Each agent is unique',
 ctaCal:'Discuss my project',
-trustBadges:['🔧 OpenClaw Technology','🏗️ Dedicated Infrastructure','🇨🇦 Canadian hosting available'],
+trustBadges:['🏗️ Dedicated Infrastructure','🔒 Your data stays with you','🇨🇦 Canadian hosting available'],
 faqTitle:'Frequently asked questions',
 faqs:[
-  {q:'What exactly is OpenClaw?',a:'OpenClaw is our proprietary AI agent creation technology. It enables building custom assistants that integrate with your existing systems.'},
   {q:'Do my data stay confidential?',a:'Absolutely. The agent is deployed on your infrastructure or a dedicated cloud. Your data never transit through our servers.'},
   {q:'How long for a complete project?',a:'Depends on complexity. Expect 4 to 8 weeks for a standard agent. We give you a precise estimate after the initial analysis.'},
-  {q:'What\'s the price range?',a:'Each project is unique. We provide a detailed quote after analyzing your needs. Contact us for a no-commitment initial call.'}
+  {q:'What\'s the price range?',a:'Each project is unique. We provide a detailed quote after analyzing your needs. Contact us for a no-commitment initial call.'},
+  {q:'Can the agent integrate with our existing tools?',a:'Yes. We design the agent to work with your current stack — CRM, ERP, email, databases, etc.'}
 ],
 ctaH2:'Ready to have your own AI assistant?',ctaSub:'Let\'s talk about your project — 20 minutes, no commitment.',ctaFinal:'Discuss my project'
 },
@@ -1078,8 +1072,12 @@ const IB_MAP = {blue:'ib-blue',cyan:'ib-cyan',green:'ib-green',red:'ib-red',purp
 const TAG_MAP = {blue:'tag-blue',cyan:'tag-cyan',green:'tag-green',red:'tag-red'};
 
 /* ─── STATE ─── */
+<<<<<<< HEAD
+let lang = 'fr';
+=======
 let lang = initLang;
-let curPage = document.documentElement.dataset.page || (typeof PAGE_ID !== 'undefined' ? PAGE_ID : 'home');
+>>>>>>> origin/main
+let curPage = document.documentElement.dataset.page || 'home';
 let scrollIndicatorHidden = false;
 
 /* ─── RENDER HELPERS ─── */
@@ -1490,6 +1488,8 @@ if(m){
 /* Toggle .lang-fr / .lang-en inline blocks */
 document.querySelectorAll('.lang-fr').forEach(el=>el.style.display=l==='fr'?'':'none');
 document.querySelectorAll('.lang-en').forEach(el=>el.style.display=l==='en'?'':'none');
+try{ render(); }catch(e){ console.error('render:',e); }
+initAnims();
 if(typeof updateChatLang==='function') updateChatLang();
 }
 
@@ -1722,7 +1722,7 @@ grid.appendChild(card);
 
 /* ─── INIT ─── */
 /* MPA: read page ID from <html data-page="..."> and detect lang from URL */
-curPage = document.documentElement.dataset.page || (typeof PAGE_ID !== 'undefined' ? PAGE_ID : curPage);
+curPage = document.documentElement.dataset.page || curPage;
 /* Set initial lang button state */
 document.documentElement.lang = lang==='fr'?'fr-CA':'en-CA';
 document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('act',b.textContent===lang.toUpperCase()));
@@ -1731,8 +1731,6 @@ document.querySelectorAll('.nav-links a[data-p]').forEach(a=>{
   a.classList.toggle('act',a.dataset.p===curPage);
 });
 
-/* Apply initial language from URL param or localStorage */
-if(typeof initLang !== 'undefined' && initLang !== 'fr') setLang(initLang);
 try{ render(); }catch(e){ console.error('render:',e); }
 initAnims();
 

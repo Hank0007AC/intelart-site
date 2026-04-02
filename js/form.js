@@ -106,16 +106,18 @@ async function submitForm(e){
   btn.disabled = true;
   btn.style.opacity = '.6';
 
-  const formData = new FormData(e.target);
-  formData.set('first_name', (document.getElementById('fi-fn')||{}).value||'');
-  formData.set('last_name', (document.getElementById('fi-ln')||{}).value||'');
-  formData.set('email', (document.getElementById('fi-em')||{}).value||'');
-  formData.set('company', (document.getElementById('fi-co')||{}).value||'');
-  formData.set('need', (document.getElementById('form-select')||{}).value||'');
-  formData.set('message', (document.getElementById('fi-msg')||{}).value||'');
-  formData.set('lang', lang || 'fr');
+  const firstName = (document.getElementById('fi-fn')||{}).value||'';
+  const lastName = (document.getElementById('fi-ln')||{}).value||'';
+  const payload = {
+    name: (firstName + ' ' + lastName).trim(),
+    email: (document.getElementById('fi-em')||{}).value||'',
+    company: (document.getElementById('fi-co')||{}).value||'',
+    message: (document.getElementById('fi-msg')||{}).value||'',
+    csrf_token: (document.querySelector('input[name="csrf_token"]')||{}).value||'',
+    lang: lang || 'fr'
+  };
 
-  fetch('/api/contact.php',{method:'POST',body:formData,credentials:'same-origin'})
+  fetch('/api/contact.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),credentials:'same-origin'})
     .then(r=>r.json())
     .then(data=>{
       if(data.success){
@@ -170,19 +172,19 @@ async function submitSurMesure(e){
   btn.disabled = true;
   btn.style.opacity = '.6';
 
-  const formData = new FormData(e.target);
-  formData.set('name', (document.getElementById('sm-name')||{}).value||'');
-  formData.set('email', (document.getElementById('sm-email')||{}).value||'');
-  formData.set('company', (document.getElementById('sm-company')||{}).value||'');
-  formData.set('sector', (document.getElementById('sm-sector')||{}).value||'');
-  formData.set('description', (document.getElementById('sm-desc')||{}).value||'');
-  formData.set('budget', (document.getElementById('sm-budget')||{}).value||'');
-  formData.set('delay', (document.getElementById('sm-delay')||{}).value||'');
   const selectedRadio = document.querySelector('.radio-opt.selected');
-  formData.set('ai_option', selectedRadio ? selectedRadio.textContent : '');
-  formData.set('lang', lang || 'fr');
+  const payload = {
+    name: (document.getElementById('sm-name')||{}).value||'',
+    email: (document.getElementById('sm-email')||{}).value||'',
+    company: (document.getElementById('sm-company')||{}).value||'',
+    sector: (document.getElementById('sm-sector')||{}).value||'',
+    budget: (document.getElementById('sm-budget')||{}).value||'',
+    message: (document.getElementById('sm-desc')||{}).value||'',
+    csrf_token: (document.querySelector('input[name="csrf_token"]')||{}).value||'',
+    lang: lang || 'fr'
+  };
 
-  fetch('/api/surmesure.php',{method:'POST',body:formData,credentials:'same-origin'})
+  fetch('/api/surmesure.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),credentials:'same-origin'})
     .then(r=>r.json())
     .then(data=>{
       if(data.success){

@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 Disallow: /logos.html
+Disallow: /api/
 Disallow: /includes/
+Disallow: /config/
+Disallow: /sql/
 
 Sitemap: https://intelart.ca/sitemap.xml

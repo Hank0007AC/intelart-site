@@ -26,30 +26,30 @@ clearBtn:'Effacer',
 welcome:'👋 Bonjour ! Je suis Aria, l\'assistante d\'Intelart. Comment puis-je vous aider aujourd\'hui ?',
 welcomeBtns:['Nos offres','Prendre un RDV','Comment ça marche ?'],
 offers:'Voici nos 5 offres. Laquelle vous intéresse ?',
-offerBtns:['Sprint IA','Audit IA','Consulting IA','Agent IA','Sur mesure'],
-sprint:'🚀 **Sprint IA** — En 10 jours, on identifie votre meilleur cas d\'usage et on livre un premier système IA fonctionnel. Prix : 5 000 $CA. Sans engagement long terme.',
-sprintBtns:['Réserver 20 min','En savoir plus'],
-audit:'🔍 **Audit IA** — En 3 à 5 jours, on analyse vos processus et on vous livre un rapport d\'opportunités IA classées par impact. Prix : 2 500 $CA.',
-auditBtns:['Commander l\'audit','Réserver un échange'],
-consulting:'💡 **Consulting IA** — Sessions stratégiques avec un expert. Aide au choix techno, architecture cible et plan de déploiement. Prix : 1 200 $CA/mois.',
+offerBtns:['Déploiement IA','Diagnostic IA','Conseil stratégique','Agent IA dédié','Sur mesure'],
+sprint:'🚀 **Déploiement IA prioritaire** — On identifie le levier le plus rentable pour votre entreprise et on le met en production en quelques semaines. Prix : 5 000 $CA. Sans engagement long terme.',
+sprintBtns:['Demander une démo','En savoir plus'],
+audit:'🔍 **Diagnostic IA** — En 3 à 5 jours, on analyse vos flux et on vous livre un rapport d\'opportunités IA classées par ROI. Prix : 2 500 $CA.',
+auditBtns:['Commander le diagnostic','Réserver un échange'],
+consulting:'💡 **Conseil stratégique IA** — Sessions de conseil de direction pour identifier les leviers IA les plus rentables et prioriser vos déploiements. Prix : 1 200 $CA/session.',
 consultingBtns:['Prendre rendez-vous'],
-agent:'🤖 **Agent IA Personnalisé (OpenClaw)** — Agent sur mesure avec infrastructure dédiée. Conception, développement, déploiement et formation inclus. Devis sur demande.',
+agent:'🤖 **Agent IA dédié** — Agent sur mesure conçu pour votre entreprise, déployé sur votre infrastructure. Conception, développement, déploiement et formation inclus. Devis sur demande.',
 agentBtns:['Discuter de mon projet →'],
 surmesure:'🛠️ **Sur Mesure** — Projet personnalisé selon vos besoins spécifiques. Développement, intégration complexe, automatisation avancée.',
 surmesureBtns:['Soumettre ma demande'],
 rdv:'📅 Réservez un échange gratuit de 20 minutes avec notre équipe. On évalue ensemble si l\'IA peut accélérer votre quotidien.',
 rdvBtns:['Réserver maintenant →'],
-process:'Voici comment on travaille :\n\n1️⃣ **Cadrage** (Jour 1) — On comprend vos problèmes et priorités\n2️⃣ **Diagnostic** (J 2-3) — Analyse de vos processus et opportunités\n3️⃣ **Prototype** (J 4-6) — Construction du premier système\n4️⃣ **Livraison** (J 7-10) — Système fonctionnel + documentation + formation',
+process:'Voici comment on travaille :\n\n1️⃣ **Cadrage** (Semaine 1) — On comprend vos pertes et priorités\n2️⃣ **Diagnostic** (S 1-2) — Cartographie des flux + identification des leviers\n3️⃣ **Construction** (S 2-3) — Déploiement du système + itérations\n4️⃣ **Livraison** (S 3-4) — Système en production + formation + indicateurs',
 processBtns:['Voir nos offres','Réserver un échange'],
-priceTrigger:'Nos tarifs :\n• Sprint IA : 5 000 $CA\n• Audit IA : 2 500 $CA\n• Consulting : 1 200 $CA/mois\n• Agent IA & Sur Mesure : sur devis\n\nL\'échange initial de 20 min est gratuit.',
+priceTrigger:'Nos tarifs :\n• Déploiement IA : 5 000 $CA\n• Diagnostic IA : 2 500 $CA\n• Conseil stratégique : 1 200 $CA/session\n• Agent IA dédié & Sur Mesure : sur devis\n\nL\'échange initial de 20 min est gratuit.',
 priceBtns:['Réserver un échange'],
-timeTrigger:'⏱️ Nos délais :\n• Sprint IA : 10 jours\n• Audit IA : 3 à 5 jours\n• Consulting : sessions flexibles\n• Agent IA : selon le projet\n\nOn commence petit, on livre vite.',
+timeTrigger:'⏱️ Nos délais :\n• Déploiement IA : 2 à 4 semaines\n• Diagnostic IA : 3 à 5 jours\n• Conseil stratégique : sessions flexibles\n• Agent IA dédié : selon le projet\n\nOn commence petit, on livre vite.',
 timeBtns:['Réserver un échange'],
 recruitTrigger:'🎯 On aide les équipes recrutement à qualifier 3x plus de candidats sans agrandir l\'équipe. Tri automatique des CV, relances programmées, pipeline centralisé.',
 recruitBtns:['Voir le cas d\'usage'],
 financeTrigger:'📊 On aide les services financiers à automatiser leurs rapports clients. Jusqu\'à 80% de temps économisé par rapport au traitement manuel.',
 financeBtns:['Voir le cas d\'usage'],
-agentTrigger:'🤖 Notre technologie OpenClaw permet de créer des agents IA personnalisés avec infrastructure dédiée. Idéal pour les besoins récurrents complexes.',
+agentTrigger:'🤖 On conçoit des agents IA dédiés avec infrastructure propre à votre entreprise. Idéal pour les besoins récurrents complexes.',
 agentTriggerBtns:['Discuter du projet'],
 escalade:'Je comprends que vous souhaitez parler à un membre de notre équipe. Réservez un échange direct et nous traiterons votre demande en priorité.',
 escaladeBtns:['Contacter un humain →'],
@@ -68,30 +68,30 @@ clearBtn:'Clear',
 welcome:'👋 Hi! I\'m Aria, Intelart\'s AI assistant. How can I help you today?',
 welcomeBtns:['Our services','Book a call','How does it work?'],
 offers:'Here are our 5 services. Which one interests you?',
-offerBtns:['AI Sprint','AI Audit','AI Consulting','AI Agent','Custom'],
-sprint:'🚀 **AI Sprint** — In 10 days, we identify your best use case and deliver a first working AI system. Price: 5 000 $CA. No long-term commitment.',
-sprintBtns:['Book 20 min','Learn more'],
-audit:'🔍 **AI Audit** — In 3 to 5 days, we analyze your processes and deliver an AI opportunity report ranked by impact. Price: 2 500 $CA.',
-auditBtns:['Order the audit','Book a call'],
-consulting:'💡 **AI Consulting** — Strategic sessions with an expert. Help with tech choices, target architecture, and deployment plan. Price: 1 200 $CA/month.',
+offerBtns:['AI Deployment','AI Diagnostic','Strategic Advisory','Dedicated AI Agent','Custom'],
+sprint:'🚀 **Priority AI Deployment** — We identify the most profitable lever for your business and put it in production within weeks. Price: 5 000 $CA. No long-term commitment.',
+sprintBtns:['Request a demo','Learn more'],
+audit:'🔍 **AI Diagnostic** — In 3 to 5 days, we analyze your flows and deliver an AI opportunity report ranked by ROI. Price: 2 500 $CA.',
+auditBtns:['Order the diagnostic','Book a call'],
+consulting:'💡 **Strategic AI Advisory** — Executive-level advisory sessions to identify the most profitable AI levers and prioritize your deployments. Price: 1 200 $CA/session.',
 consultingBtns:['Book an appointment'],
-agent:'🤖 **Custom AI Agent (OpenClaw)** — Tailor-made AI agent with dedicated infrastructure. Design, development, deployment, and training included. Quote on request.',
+agent:'🤖 **Dedicated AI Agent** — Custom AI agent designed for your business, deployed on your infrastructure. Design, development, deployment, and training included. Quote on request.',
 agentBtns:['Discuss my project →'],
 surmesure:'🛠️ **Custom Project** — Tailored to your specific needs. Custom development, complex integration, advanced automation.',
 surmesureBtns:['Submit my request'],
 rdv:'📅 Book a free 20-minute call with our team. We\'ll assess together whether AI can accelerate your daily work.',
 rdvBtns:['Book now →'],
-process:'Here\'s how we work:\n\n1️⃣ **Scoping** (Day 1) — We understand your problems and priorities\n2️⃣ **Diagnosis** (D 2-3) — Process analysis and opportunities\n3️⃣ **Prototype** (D 4-6) — Building the first system\n4️⃣ **Delivery** (D 7-10) — Working system + documentation + training',
+process:'Here\'s how we work:\n\n1️⃣ **Scoping** (Week 1) — We understand your losses and priorities\n2️⃣ **Diagnosis** (W 1-2) — Flow mapping + lever identification\n3️⃣ **Build** (W 2-3) — System deployment + iterations\n4️⃣ **Delivery** (W 3-4) — System in production + training + metrics',
 processBtns:['See our services','Book a call'],
-priceTrigger:'Our pricing:\n• AI Sprint: 5 000 $CA\n• AI Audit: 2 500 $CA\n• Consulting: 1 200 $CA/month\n• AI Agent & Custom: on request\n\nThe initial 20-min call is free.',
+priceTrigger:'Our pricing:\n• AI Deployment: 5 000 $CA\n• AI Diagnostic: 2 500 $CA\n• Strategic Advisory: 1 200 $CA/session\n• Dedicated AI Agent & Custom: on request\n\nThe initial 20-min call is free.',
 priceBtns:['Book a call'],
-timeTrigger:'⏱️ Our timelines:\n• AI Sprint: 10 days\n• AI Audit: 3 to 5 days\n• Consulting: flexible sessions\n• AI Agent: depends on project\n\nWe start small, we deliver fast.',
+timeTrigger:'⏱️ Our timelines:\n• AI Deployment: 2 to 4 weeks\n• AI Diagnostic: 3 to 5 days\n• Strategic Advisory: flexible sessions\n• Dedicated AI Agent: depends on project\n\nWe start small, we deliver fast.',
 timeBtns:['Book a call'],
 recruitTrigger:'🎯 We help recruitment teams qualify 3x more candidates without growing the team. Automatic CV sorting, scheduled follow-ups, centralized pipeline.',
 recruitBtns:['See use case'],
 financeTrigger:'📊 We help financial services automate their client reports. Up to 80% time saved compared to manual processing.',
 financeBtns:['See use case'],
-agentTrigger:'🤖 Our OpenClaw technology enables custom AI agents with dedicated infrastructure. Ideal for complex recurring needs.',
+agentTrigger:'🤖 We build dedicated AI agents with infrastructure specific to your business. Ideal for complex recurring needs.',
 agentTriggerBtns:['Discuss the project'],
 escalade:'I understand you would like to speak with a team member. Book a direct call and we will handle your request as a priority.',
 escaladeBtns:['Contact a human →'],
@@ -245,15 +245,24 @@ if(/annul|cancel|modifier.*rendez|change.*appointment|reschedul/.test(t)){botRep
 /* P1: Escalation to human */
 if(/humain|personne|[eé]quipe|support|aide|help|human|person|team|speak|talk|agent r[eé]el|real agent|parler [àa]/.test(t)){botReply(cb.escalade, cb.escaladeBtns);return true;}
 /* Standard keyword detection */
+if(/prix|tarif|co[uû]t|price|cost/.test(t)){botReply(cb.priceTrigger, cb.priceBtns);return true;}
+if(/d[eé]lai|temps|rapide|fast|time|how long|combien de temps/.test(t)){botReply(cb.timeTrigger, cb.timeBtns);return true;}
+if(/recrutement|rh|candidat|recruitment|hr|hiring|recruit/.test(t)){botReply(cb.recruitTrigger, cb.recruitBtns);return true;}
+if(/finance|rapport|comptab|financial|report|accounting/.test(t)){botReply(cb.financeTrigger, cb.financeBtns);return true;}
+if(/agent|personnal|custom agent|assistant/.test(t)){botReply(cb.agentTrigger, cb.agentTriggerBtns);return true;}
+if(/offre|service|offer/.test(t)){botReply(cb.offers, cb.offerBtns);return true;}
+if(/rdv|rendez|meeting|call|booking|r[eé]serv/.test(t)){botReply(cb.rdv, cb.rdvBtns);return true;}
+if(/comment|how|process|[eé]tape|step/.test(t)){botReply(cb.process, cb.processBtns);return true;}
+if(/sprint|d[eé]ploiement|deploy/.test(t)){botReply(cb.sprint, cb.sprintBtns);return true;}
+if(/audit|diagnostic/.test(t)){botReply(cb.audit, cb.auditBtns);return true;}
+if(/consult/.test(t)){botReply(cb.consulting, cb.consultingBtns);return true;}
+if(/bonjour|salut|hello|hi |hey/.test(t)){botReply(cb.welcome, cb.welcomeBtns);return true;}
 return false;
 }
 
-/* ── OpenClaw Config ── */
-/* ⚠️ SECURITY: Never put API keys here in production.
-   Use a server-side proxy (e.g., /api/chatbot-proxy.php) instead.
-   This file is visible to all users in the browser. */
+/* ── Aria AI Proxy Config ── */
 const OPENCLAW_URL = '/api/aria-proxy.php';
-const OPENCLAW_KEY = ''; /* Server-side only — DO NOT fill in client JS */
+const OPENCLAW_KEY = '';
 
 async function callOpenClaw(text){
 if(!OPENCLAW_URL) return null;
@@ -277,7 +286,7 @@ return await res.json();
 } catch(e){ return null; }
 }
 
-/* ── Send message (hybrid: local → OpenClaw → fallback) ── */
+/* ── Send message (hybrid: local → Aria AI → fallback) ── */
 window.sendMsg = async function(){
 if(Date.now() - lastMsgTime < MSG_COOLDOWN) return;
 lastMsgTime = Date.now();
@@ -289,7 +298,7 @@ cbInput.value = '';
 /* 1) Local keywords — instant, free */
 if(detectKeyword(val)) return;
 
-/* 2) OpenClaw agent — if configured */
+/* 2) Aria AI — if configured */
 if(OPENCLAW_URL){
 showTyping();
 var data = await callOpenClaw(val);
@@ -408,6 +417,7 @@ updateChatLang();
 if(cbInput) cbInput.setAttribute('aria-label', typeof lang!=='undefined'&&lang==='en'?'Message for Aria':'Message pour Aria');
 
 /* ── Event listeners (replaces inline onclick) ── */
+var cbFloat = document.getElementById('cb-float');
 if(cbFloat) cbFloat.addEventListener('click', function(){ toggleChat(); });
 var cbCloseBtn = document.getElementById('cb-close');
 if(cbCloseBtn) cbCloseBtn.addEventListener('click', function(){ toggleChat(); });
