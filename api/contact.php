@@ -29,7 +29,7 @@ if (empty($name) || empty($email) || empty($message)) {
 $to      = 'contact@intelart.ca';
 $subject = 'Nouveau message de contact - ' . $name;
 $body_txt = "Nom: $name\nEmail: $email\nEntreprise: $company\n\nMessage:\n$message";
-$headers  = "From: noreply@intelart.ca\r\nReply-To: $email\r\nContent-Type: text/plain; charset=utf-8";
+$headers  = "From: contact@intelart.ca\r\nReply-To: $email\r\nContent-Type: text/plain; charset=utf-8";
 
 if (mail($to, $subject, $body_txt, $headers)) {
     echo json_encode(['success' => true, 'message' => 'Message envoyé avec succès']);
