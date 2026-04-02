@@ -117,7 +117,7 @@ benItems:[
   {icon:'ai',label:'Plus de capacité',sub:'Sans recruter'},
   {icon:'next',label:'Base pour grandir',sub:'Évolutive'},
 ],
-ctaH2:'Prêt à capter plus d\'opportunités ?', ctaSub:'20 minutes pour identifier vos pertes de revenus et les leviers IA les plus rentables. Sans engagement.', ctaBtn:'Réserver un échange de 20 minutes',
+ctaH2:'Prêt à capter plus d\'opportunités ?', ctaSub:'20 minutes pour identifier vos pertes de revenus et les leviers IA les plus rentables. Sans engagement.', ctaBtn:'Demander une démo',
 socialEye:'Résultats clients', socialH2:'Ils nous font confiance',
 testimonials:[
   {stars:5,quote:'Grâce au système mis en place, nous avons réduit de 60% le temps de qualification de nos leads export. Le ROI a été visible dès le premier mois.',author:'Directeur commercial',company:'Automium'},
@@ -165,7 +165,7 @@ timeline:[
   {year:'2025',text:'Structuration de l\'offre Déploiement IA. Spécialisation : résultats concrets et mesurables pour PME de services.'},
   {year:'2026',text:'Lancement de la technologie d\'agents IA dédiés. Expansion marchés francophones.'}
 ],
-ctaH2:'Discutons de votre situation', ctaSub:'20 minutes pour voir si l\'IA peut concrètement vous faire gagner du temps. Sans engagement.', ctaBtn:'Réserver un échange',
+ctaH2:'Discutons de votre situation', ctaSub:'20 minutes pour voir si l\'IA peut concrètement vous faire gagner du temps. Sans engagement.', ctaBtn:'Demander une démo',
 },
 services: {
 eye:'Nos services', h1:'Captez plus,\nconvertissez mieux',
@@ -218,7 +218,7 @@ info:[
   {icon:'mail',label:'Email',val:'contact@intelart.ca',href:'mailto:contact@intelart.ca'},
   {icon:'phone',label:'Téléphone',val:'+1 613 261 8709'},
   {icon:'pin',label:'Localisation',val:'Ottawa, Ontario, Canada'},
-  {icon:'cal',label:'Prise de rendez-vous',val:'Réserver directement →',href:'https://cal.com/intelart/echange-decouverte-discovery-call'},
+  {icon:'cal',label:'Prise de rendez-vous',val:'Demander une démo →',href:'https://cal.com/intelart/echange-decouverte-discovery-call'},
 ],
 nextTitle:'Ce qui se passe après',
 nextList:['Réponse sous 24h ouvrables','Échange de 20 minutes sans engagement','On évalue ensemble si c\'est pertinent','Si oui : proposition claire et cadrage rapide'],
@@ -234,11 +234,11 @@ errEmail:'Veuillez entrer un email valide',
 },
 footer: {
 tagline:'Solutions IA concrètes et opérationnelles pour PME B2B au Canada.',
-cta:'Réserver un échange',
+cta:'Demander une démo',
 navTitle:'Navigation', svcTitle:'Services', ctTitle:'Contact',
 navLinks:[{l:'Accueil',p:'home'},{l:'À propos',p:'about'},{l:'Services',p:'services'},{l:'Offres',p:'offers'},{l:'Contact',p:'contact'}],
 svcLinks:['Diagnostic IA','Déploiement IA','Conseil stratégique','Agent IA dédié','Sur mesure'],
-ctLinks:['contact@intelart.ca','+1 613 261 8709','Ottawa, Canada','Réserver un rendez-vous'],
+ctLinks:['contact@intelart.ca','+1 613 261 8709','Ottawa, Canada','Demander une démo'],
 copy:'© 2026 Intelart. Tous droits réservés.',
 right:'Ottawa, Canada · Solutions IA pour PME B2B',
 },
@@ -249,7 +249,7 @@ delivTitle:'Ce qu\'on livre',
 beforeLabel:'Avant',afterLabel:'Après',
 processTitle:'Comment ça marche',
 procSteps:[{day:'Semaine 1',title:'Cadrage',icon:'scope'},{day:'S 1–2',title:'Diagnostic',icon:'diag'},{day:'S 2–3',title:'Construction',icon:'build'},{day:'S 3–4',title:'Livraison',icon:'deliver'}],
-ctaCal:'Réserver un échange gratuit de 20 min',
+ctaCal:'Demander une démo gratuite',
 ctaPay:'Demander une démo',
 trustBadges:['🔒 Paiement sécurisé SSL','↩ Remboursé si insatisfait 48h','🇨🇦 Ottawa, Canada'],
 faqTitle:'Questions fréquentes',
@@ -423,7 +423,7 @@ faqs:[
   {q:'Est-ce que l\'audit couvre aussi les outils existants ?',a:'Oui. On évalue vos outils actuels et comment l\'IA peut s\'y intégrer — ou les remplacer si pertinent.'},
   {q:'Je peux ensuite passer au Sprint IA ?',a:'Absolument. L\'audit est le point de départ idéal pour un Sprint. Le prix de l\'audit est souvent déduit du Sprint si vous enchaînez.'}
 ],
-ctaH2:'Prêt à avoir une vision claire de vos opportunités IA ?',ctaSub:'On vous livre un diagnostic complet en 3 à 5 jours.',ctaFinal:'Réserver un échange'
+ctaH2:'Prêt à avoir une vision claire de vos opportunités IA ?',ctaSub:'On vous livre un diagnostic complet en 3 à 5 jours.',ctaFinal:'Demander une démo'
 },
 offreConsulting: {
 tags:['Stratégique','Demi-journée ou journée'],
@@ -442,7 +442,7 @@ delivTitle:'Ce que vous obtenez',
 deliverables:['Un plan stratégique d\'intégration IA','Une architecture cible validée','Des recommandations technologiques','Un plan de déploiement à moyen terme','Des critères de sélection d\'outils','Un document de synthèse exploitable'],
 price:'1 200 $CA',
 priceSub:'par session · Demi-journée ou journée complète',
-ctaCal:'Prendre rendez-vous',
+ctaCal:'Demander une démo',
 trustBadges:['🇨🇦 Basé à Ottawa, Canada','🤝 Sans engagement','📋 Compte-rendu livré après chaque session'],
 faqTitle:'Questions fréquentes',
 faqs:[
@@ -451,7 +451,7 @@ faqs:[
   {q:'Est-ce que vous vendez aussi l\'implémentation après ?',a:'On peut, mais ce n\'est pas obligatoire. Le consulting est un service autonome. Si vous implémentez en interne, nos recommandations restent valables.'},
   {q:'Quel est le format exact ?',a:'En personne à Ottawa ou en visioconférence. On commence par un brief de cadrage, puis travail collaboratif sur vos enjeux spécifiques.'}
 ],
-ctaH2:'Besoin d\'une vision stratégique claire ?',ctaSub:'Prenons rendez-vous pour cadrer votre besoin.',ctaFinal:'Prendre rendez-vous'
+ctaH2:'Besoin d\'une vision stratégique claire ?',ctaSub:'Prenons rendez-vous pour cadrer votre besoin.',ctaFinal:'Demander une démo'
 },
 offreAgent: {
 tags:['Avancé','Infrastructure dédiée','Sur mesure'],
@@ -615,7 +615,7 @@ benItems:[
   {icon:'ai',label:'More capacity',sub:'Without hiring'},
   {icon:'next',label:'Foundation to grow',sub:'Scalable'},
 ],
-ctaH2:'Ready to capture more opportunities?', ctaSub:'20 minutes to identify your revenue losses and the most profitable AI levers. No commitment.', ctaBtn:'Book a 20-minute call',
+ctaH2:'Ready to capture more opportunities?', ctaSub:'20 minutes to identify your revenue losses and the most profitable AI levers. No commitment.', ctaBtn:'Request a demo',
 socialEye:'Client results', socialH2:'They trust us',
 testimonials:[
   {stars:5,quote:'Thanks to the system deployed, we reduced export lead qualification time by 60%. ROI was visible from month one.',author:'Sales Director',company:'Automium'},
@@ -663,7 +663,7 @@ timeline:[
   {year:'2025',text:'AI Deployment offer structured. Specialization: concrete, measurable results for service SMBs.'},
   {year:'2026',text:'Launch of dedicated AI agent technology. Francophone market expansion.'}
 ],
-ctaH2:'Let\'s discuss your situation', ctaSub:'20 minutes to see if AI can concretely save you time. No commitment.', ctaBtn:'Book a call',
+ctaH2:'Let\'s discuss your situation', ctaSub:'20 minutes to see if AI can concretely save you time. No commitment.', ctaBtn:'Request a demo',
 },
 services: {
 eye:'Our services', h1:'Capture more,\nconvert better',
@@ -732,11 +732,11 @@ errEmail:'Please enter a valid email',
 },
 footer: {
 tagline:'Concrete, operational AI solutions for B2B SMBs in Canada.',
-cta:'Book a call',
+cta:'Request a demo',
 navTitle:'Navigation', svcTitle:'Services', ctTitle:'Contact',
 navLinks:[{l:'Home',p:'home'},{l:'About',p:'about'},{l:'Services',p:'services'},{l:'Offers',p:'offers'},{l:'Contact',p:'contact'}],
 svcLinks:['AI Diagnostic','AI Deployment','Strategic Consulting','Dedicated AI Agent','Custom'],
-ctLinks:['contact@intelart.ca','+1 613 261 8709','Ottawa, Canada','Book a call'],
+ctLinks:['contact@intelart.ca','+1 613 261 8709','Ottawa, Canada','Request a demo'],
 copy:'© 2026 Intelart. All rights reserved.',
 right:'Ottawa, Canada · AI Solutions for B2B SMBs',
 },
@@ -747,7 +747,7 @@ delivTitle:'What we deliver',
 beforeLabel:'Before',afterLabel:'After',
 processTitle:'How it works',
 procSteps:[{day:'Week 1',title:'Scoping',icon:'scope'},{day:'W 1–2',title:'Diagnosis',icon:'diag'},{day:'W 2–3',title:'Build',icon:'build'},{day:'W 3–4',title:'Delivery',icon:'deliver'}],
-ctaCal:'Book a free 20-min call',
+ctaCal:'Request a free demo',
 ctaPay:'Request a demo',
 trustBadges:['🔒 Secure SSL payment','↩ Refund within 48h if unsatisfied','🇨🇦 Ottawa, Canada'],
 faqTitle:'Frequently asked questions',
@@ -892,7 +892,7 @@ faqs:[
   {q:'I\'m not technical. Is that a problem?',a:'Not at all. We translate technical into business language. Your team doesn\'t need to code — they need to understand how to use the system.'},
   {q:'What happens after the Sprint?',a:'You have a working system + documentation + training. If you want to go further, we offer implementation support. But no obligation.'}
 ],
-ctaH2:'Ready to see AI in action on your case?',ctaSub:'20 minutes to assess if your situation is a good fit.',ctaFinal:'Book a 20-minute call'
+ctaH2:'Ready to see AI in action on your case?',ctaSub:'20 minutes to assess if your situation is a good fit.',ctaFinal:'Request a demo'
 },
 offreAudit: {
 tags:['Diagnostic','3 to 5 days'],
@@ -921,7 +921,7 @@ faqs:[
   {q:'Does the diagnostic also cover existing tools?',a:'Yes. We evaluate your current tools and how AI can integrate — or replace them if relevant.'},
   {q:'Can I then move to the AI Deployment?',a:'Absolutely. The diagnostic is the ideal starting point. The diagnostic price is often deducted if you proceed.'}
 ],
-ctaH2:'Ready for a clear view of your AI opportunities?',ctaSub:'We deliver a complete diagnosis in 3 to 5 days.',ctaFinal:'Book a call'
+ctaH2:'Ready for a clear view of your AI opportunities?',ctaSub:'We deliver a complete diagnosis in 3 to 5 days.',ctaFinal:'Request a demo'
 },
 offreConsulting: {
 tags:['Strategic','Half-day or full day'],
@@ -940,7 +940,7 @@ delivTitle:'What you get',
 deliverables:['A strategic AI integration plan','A validated target architecture','Technology recommendations','A medium-term deployment plan','Tool selection criteria','An actionable synthesis document'],
 price:'1 200 $CA',
 priceSub:'per session · Half-day or full day',
-ctaCal:'Book an appointment',
+ctaCal:'Request a demo',
 trustBadges:['🇨🇦 Based in Ottawa, Canada','🤝 No commitment','📋 Summary delivered after each session'],
 faqTitle:'Frequently asked questions',
 faqs:[
@@ -949,7 +949,7 @@ faqs:[
   {q:'Do you also sell implementation afterwards?',a:'We can, but it\'s not mandatory. Consulting is a standalone service. If you implement in-house, our recommendations remain valid.'},
   {q:'What\'s the exact format?',a:'In person in Ottawa or via video call. We start with a framing brief, then collaborative work on your specific challenges.'}
 ],
-ctaH2:'Need a clear strategic vision?',ctaSub:'Let\'s book a call to scope your needs.',ctaFinal:'Book an appointment'
+ctaH2:'Need a clear strategic vision?',ctaSub:'Let\'s book a call to scope your needs.',ctaFinal:'Request a demo'
 },
 offreAgent: {
 tags:['Advanced','Dedicated infrastructure','Custom'],
