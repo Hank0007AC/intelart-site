@@ -216,7 +216,7 @@ if(l==='voir nos offres'||l==='see our services'){botReply(cb.offers, cb.offerBt
 /* Sprint savoir plus */
 if(l==='en savoir plus'||l==='learn more'){toggleChat();go('offre-sprint');return;}
 /* Commander audit */
-if(l==='commander l\'audit'||l==='order the audit'){window.open('https://buy.stripe.com/test_aFafZj0Ir7kRc8Lgtb6wE01','_blank','noopener,noreferrer');return;}
+if(l==='commander l\'audit'||l==='order the audit'){window.open('https://buy.stripe.com/test_6oU4gBgHp48FegT2Cl6wE00','_blank','noopener,noreferrer');return;}
 /* Prendre RDV / Réserver */
 if(l.includes('réserver')||l.includes('book')||l==='prendre rendez-vous'||l==='book an appointment'){window.open('https://cal.com/intelart/echange-decouverte-discovery-call','_blank','noopener,noreferrer');return;}
 /* Discuter projet */
@@ -295,10 +295,7 @@ if(!val) return;
 addUserMsg(val);
 cbInput.value = '';
 
-/* 1) Local keywords — instant, free */
-if(detectKeyword(val)) return;
-
-/* 2) Aria AI — if configured */
+/* 1) Aria AI first */
 if(OPENCLAW_URL){
 showTyping();
 var data = await callOpenClaw(val);
@@ -312,7 +309,10 @@ return;
 }
 }
 
-/* 3) Fallback static — always a response */
+/* 2) Local keyword fallback */
+if(detectKeyword(val)) return;
+
+/* 3) Static fallback */
 var cb = getCB();
 botReply(cb.fallback, cb.fallbackBtns);
 };
@@ -412,12 +412,12 @@ cbInput.placeholder = cb.placeholder;
 };
 
 /* ── Init ── */
+sessionStorage.removeItem(CB_KEY);
 restoreChat();
 updateChatLang();
 if(cbInput) cbInput.setAttribute('aria-label', typeof lang!=='undefined'&&lang==='en'?'Message for Aria':'Message pour Aria');
 
 /* ── Event listeners (replaces inline onclick) ── */
-var cbFloat = document.getElementById('cb-float');
 if(cbFloat) cbFloat.addEventListener('click', function(){ toggleChat(); });
 var cbCloseBtn = document.getElementById('cb-close');
 if(cbCloseBtn) cbCloseBtn.addEventListener('click', function(){ toggleChat(); });
