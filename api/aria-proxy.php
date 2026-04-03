@@ -50,7 +50,7 @@ LIENS :
 - Déploiement IA 5000$ : https://buy.stripe.com/7sY7sNdvddJf5Kn50J6wE02
 - Diagnostic 2500$ : https://buy.stripe.com/aFafZj0Ir7kRc8Lgtb6wE01
 - Conseil 1200$/session : https://buy.stripe.com/6oU4gBgHp48FegT2Cl6wE00
-- Email : contact@intelart.ca | Tél : +1 613 261 8709
+- Email : contact@intelart.ca
 
 RÈGLES :
 - Réponses courtes (2-4 phrases max)
