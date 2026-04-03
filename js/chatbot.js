@@ -153,7 +153,7 @@ div.appendChild(bd);
 }
 cbBody.appendChild(div);
 cbBody.scrollTop = cbBody.scrollHeight;
-chatHistory.push({role:'bot',text:text,btns:btns||[]});
+chatHistory.push({role:'assistant',text:text,btns:btns||[]});
 saveChat();
 }
 
@@ -374,7 +374,7 @@ var d = JSON.parse(sessionStorage.getItem(CB_KEY));
 if(d && d.history && d.history.length){
 d.history.forEach(function(m){
   var div = document.createElement('div');
-  if(m.role==='bot'){
+  if(m.role==='assistant'||m.role==='bot'){
     div.className = 'cb-msg cb-msg-bot';
     safeBotContent(m.text, div);
     if(m.btns && m.btns.length){
