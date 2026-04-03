@@ -120,7 +120,7 @@ $payload = [
     'model' => $model,
     'messages' => $messages,
     'temperature' => 0.4,
-    'max_tokens' => 450
+    'max_tokens' => 260
 ];
 
 $fb = $lang === 'fr'
@@ -138,7 +138,7 @@ curl_setopt_array($ch, [
     CURLOPT_POST => true,
     CURLOPT_POSTFIELDS => json_encode($payload),
     CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_TIMEOUT => 25,
+    CURLOPT_TIMEOUT => 35,
     CURLOPT_HTTPHEADER => [
         'Content-Type: application/json',
         'Authorization: Bearer ' . $apiKey

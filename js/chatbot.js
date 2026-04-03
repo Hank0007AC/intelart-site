@@ -236,27 +236,63 @@ botReply(cb.fallback, cb.fallbackBtns);
 
 /* ── Keyword detection for free text ── */
 function detectKeyword(text){
-var t = text.toLowerCase();
+var t = text.toLowerCase().trim();
 var cb = getCB();
-/* P1: Sensitive — disputes, billing, refunds (MUST be first) */
+
+/* Identity */
+if(/qui es[- ]?tu|qui est[- ]?tu|qu['’]?est[- ]?ce que tu es|qu['’]?est ce que tu es|who are you|what are you/.test(t)){
+  botReply(
+    lang==='fr'
+      ? "Je suis Aria, l'assistante IA d'Intelart. J'aide les PME de services à capter, qualifier et convertir plus de demandes clients grâce à l'IA."
+      : "I’m Aria, Intelart’s AI assistant. I help service SMBs capture, qualify and convert more client requests with AI.",
+    lang==='fr' ? ['Nos offres','Prendre un RDV'] : ['Our services','Request a demo']
+  );
+  return true;
+}
+
+/* Founder / creator */
+if(/qui t['’ ]a cr|qui a cr|fondateur|ceo|founder|who created you|who built you/.test(t)){
+  botReply(
+    lang==='fr'
+      ? "Intelart a été fondée par un profil B2B avec plus de 6 ans d’expérience, avec des passages par Havas, Publicis et GroupM, et une pratique de l’IA depuis 2022."
+      : "Intelart was founded by a B2B operator with 6+ years of experience, including Havas, Publicis and GroupM, with hands-on AI work since 2022.",
+    lang==='fr' ? ['Prendre un RDV'] : ['Request a demo']
+  );
+  return true;
+}
+
+/* Offers / services */
+if(/offre|offres|service|services|what do you offer|what are your services|pricing|tarif|prix/.test(t)){
+  botReply(cb.offers, cb.offerBtns);
+  return true;
+}
+
+/* Greetings / small talk */
+if(/salam|salamoualaykoum|salam alaykoum|labass|labas|ça va|cava|cv|bonjour|salut|hello|^hi$|^hey$/.test(t)){
+  botReply(cb.welcome, cb.welcomeBtns);
+  return true;
+}
+
+/* P1: Sensitive — disputes, billing, refunds */
 if(/d[eé]bit|rembours|factur|litige|probl[eè]me.*paie|double.*charge|charged.*twice|refund|billing|dispute|payment.*issue|invoice.*error|overcharged/.test(t)){botReply(cb.litige, cb.litigeBtns);return true;}
+
 /* P1: Cancellation/modification */
 if(/annul|cancel|modifier.*rendez|change.*appointment|reschedul/.test(t)){botReply(cb.annulation, cb.annulationBtns);return true;}
+
 /* P1: Escalation to human */
 if(/humain|personne|[eé]quipe|support|aide|help|human|person|team|speak|talk|agent r[eé]el|real agent|parler [àa]/.test(t)){botReply(cb.escalade, cb.escaladeBtns);return true;}
+
 /* Standard keyword detection */
-if(/prix|tarif|co[uû]t|price|cost/.test(t)){botReply(cb.priceTrigger, cb.priceBtns);return true;}
 if(/d[eé]lai|temps|rapide|fast|time|how long|combien de temps/.test(t)){botReply(cb.timeTrigger, cb.timeBtns);return true;}
 if(/recrutement|rh|candidat|recruitment|hr|hiring|recruit/.test(t)){botReply(cb.recruitTrigger, cb.recruitBtns);return true;}
 if(/finance|rapport|comptab|financial|report|accounting/.test(t)){botReply(cb.financeTrigger, cb.financeBtns);return true;}
 if(/agent|personnal|custom agent|assistant/.test(t)){botReply(cb.agentTrigger, cb.agentTriggerBtns);return true;}
-if(/offre|service|offer/.test(t)){botReply(cb.offers, cb.offerBtns);return true;}
 if(/rdv|rendez|meeting|call|booking|r[eé]serv/.test(t)){botReply(cb.rdv, cb.rdvBtns);return true;}
 if(/comment|how|process|[eé]tape|step/.test(t)){botReply(cb.process, cb.processBtns);return true;}
 if(/sprint|d[eé]ploiement|deploy/.test(t)){botReply(cb.sprint, cb.sprintBtns);return true;}
 if(/audit|diagnostic/.test(t)){botReply(cb.audit, cb.auditBtns);return true;}
 if(/consult/.test(t)){botReply(cb.consulting, cb.consultingBtns);return true;}
-if(/bonjour|salut|hello|hi |hey/.test(t)){botReply(cb.welcome, cb.welcomeBtns);return true;}
+
 return false;
 }
 
@@ -292,25 +328,26 @@ if(Date.now() - lastMsgTime < MSG_COOLDOWN) return;
 lastMsgTime = Date.now();
 var val = cbInput.value.trim();
 if(!val) return;
+
 addUserMsg(val);
 cbInput.value = '';
 
-/* 1) Aria AI first */
-if(OPENCLAW_URL){
-showTyping();
-var data = await callOpenClaw(val);
-hideTyping();
-if(data && data.text){
-var btns = (data.actions||[]).map(function(a){return a.label;});
-addBotMsg(data.text, btns);
-if(data.navigate && ALLOWED_PAGES.indexOf(data.navigate) !== -1){ toggleChat(); go(data.navigate); }
-if(data.redirect && /^https:\/\/(cal\.com|buy\.stripe\.com)\//.test(data.redirect)){ window.open(data.redirect,'_blank','noopener,noreferrer'); }
-return;
-}
-}
-
-/* 2) Local keyword fallback */
+/* 1) Local keyword handling first */
 if(detectKeyword(val)) return;
+
+/* 2) Aria AI next */
+if(OPENCLAW_URL){
+  showTyping();
+  var data = await callOpenClaw(val);
+  hideTyping();
+  if(data && data.text){
+    var btns = (data.actions||[]).map(function(a){return a.label;});
+    addBotMsg(data.text, btns);
+    if(data.navigate && ALLOWED_PAGES.indexOf(data.navigate) !== -1){ toggleChat(); go(data.navigate); }
+    if(data.redirect && /^https:\/\/(cal\.com|buy\.stripe\.com)\//.test(data.redirect)){ window.open(data.redirect,'_blank','noopener,noreferrer'); }
+    return;
+  }
+}
 
 /* 3) Static fallback */
 var cb = getCB();
