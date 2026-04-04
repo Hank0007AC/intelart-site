@@ -202,10 +202,10 @@ if(l.includes('contacter un humain')||l.includes('contact a human')||l.includes(
 /* Offers list */
 if(l==='nos offres'||l==='our services'){botReply(cb.offers, cb.offerBtns);return;}
 /* Individual offers */
-if(l==='sprint ia'||l==='ai sprint'){botReply(cb.sprint, cb.sprintBtns);return;}
-if(l==='audit ia'||l==='ai audit'){botReply(cb.audit, cb.auditBtns);return;}
-if(l==='consulting ia'||l==='ai consulting'){botReply(cb.consulting, cb.consultingBtns);return;}
-if(l==='agent ia'||l==='ai agent'){botReply(cb.agent, cb.agentBtns);return;}
+if(l==='déploiement ia'||l==='ai deployment'||l==='sprint ia'||l==='ai sprint'){botReply(cb.sprint, cb.sprintBtns);return;}
+if(l==='diagnostic ia'||l==='ai diagnostic'||l==='audit ia'||l==='ai audit'){botReply(cb.audit, cb.auditBtns);return;}
+if(l==='conseil stratégique'||l==='strategic advisory'||l==='consulting ia'||l==='ai consulting'){botReply(cb.consulting, cb.consultingBtns);return;}
+if(l==='agent ia dédié'||l==='dedicated ai agent'||l==='agent ia'||l==='ai agent'){botReply(cb.agent, cb.agentBtns);return;}
 if(l==='sur mesure'||l==='custom'){botReply(cb.surmesure, cb.surmesureBtns);return;}
 /* RDV */
 if(l==='prendre un rdv'||l==='book a call'||l==='réserver un échange'||l==='book a call'){botReply(cb.rdv, cb.rdvBtns);return;}
@@ -216,7 +216,7 @@ if(l==='voir nos offres'||l==='see our services'){botReply(cb.offers, cb.offerBt
 /* Sprint savoir plus */
 if(l==='en savoir plus'||l==='learn more'){toggleChat();go('offre-sprint');return;}
 /* Commander audit */
-if(l==='commander l\'audit'||l==='order the audit'){window.open('https://buy.stripe.com/test_6oU4gBgHp48FegT2Cl6wE00','_blank','noopener,noreferrer');return;}
+if(l==='commander le diagnostic'||l==='commander l\'audit'||l==='order the diagnostic'||l==='order the audit'){window.open('https://buy.stripe.com/test_6oU4gBgHp48FegT2Cl6wE00','_blank','noopener,noreferrer');return;}
 /* Prendre RDV / Réserver */
 if(l.includes('réserver')||l.includes('book')||l==='prendre rendez-vous'||l==='book an appointment'){window.open('https://cal.com/intelart/echange-decouverte-discovery-call','_blank','noopener,noreferrer');return;}
 /* Discuter projet */
@@ -254,9 +254,9 @@ if(/qui es[- ]?tu|qui est[- ]?tu|qu['’]?est[- ]?ce que tu es|qu['’]?est ce q
 if(/qui t['’ ]a cr|qui a cr|fondateur|ceo|founder|who created you|who built you/.test(t)){
   botReply(
     lang==='fr'
-      ? "Intelart a été fondée par un profil B2B avec plus de 6 ans d’expérience, avec des passages par Havas, Publicis et GroupM, et une pratique de l’IA depuis 2022."
-      : "Intelart was founded by a B2B operator with 6+ years of experience, including Havas, Publicis and GroupM, with hands-on AI work since 2022.",
-    lang==='fr' ? ['Prendre un RDV'] : ['Request a demo']
+      ? "Intelart a été fondée par une équipe B2B avec plus de 10 ans d’expérience terrain, avec des passages par Havas, Publicis et GroupeM, et orientée IA depuis les débuts."
+      : "Intelart was founded by a B2B team with over 10 years of field experience, including Havas, Publicis and GroupeM, AI-driven since the start.",
+    lang===’fr’ ? [‘Demander une démo’] : [‘Request a demo’]
   );
   return true;
 }
