@@ -14,7 +14,8 @@ const PAGE_URLS = {
   'secteur-recrutement':'/secteur-recrutement.html', 'secteur-finance':'/secteur-finance.html',
   'secteur-operations':'/secteur-operations.html', 'secteur-immobilier':'/secteur-immobilier.html',
   'secteur-juridique':'/secteur-juridique.html', 'secteur-sante':'/secteur-sante.html',
-  'logos':'/logos.html'
+  'logos':'/logos.html',
+  'privacy':'/privacy-policy.html'
 };
 
 // Detect language from URL query param
@@ -217,7 +218,6 @@ intro:'20 minutes pour trouver où vous laissez de l\'argent sur la table. Pas d
 h2:'Prendre contact', sub:'Pas un formulaire qui disparaît dans le vide. Réponse sous 24h.',
 info:[
   {icon:'mail',label:'Email',val:'contact@intelart.ca',href:'mailto:contact@intelart.ca'},
-  {icon:'phone',label:'Téléphone',val:'+1 613 261 8709'},
   {icon:'pin',label:'Localisation',val:'Ottawa, Ontario, Canada'},
   {icon:'cal',label:'Prise de rendez-vous',val:'Demander une démo →',href:'https://cal.com/intelart/echange-decouverte-discovery-call'},
 ],
@@ -236,10 +236,10 @@ errEmail:'Veuillez entrer un email valide',
 footer: {
 tagline:'D\'autres parlent d\'IA. Nous livrons des résultats. PME B2B, Canada.',
 cta:'Demander une démo',
-navTitle:'Navigation', svcTitle:'Services', ctTitle:'Contact',
+navTitle:'Navigation', svcTitle:'Offres', ctTitle:'Contact',
 navLinks:[{l:'Accueil',p:'home'},{l:'À propos',p:'about'},{l:'Services',p:'services'},{l:'Offres',p:'offers'},{l:'Contact',p:'contact'}],
-svcLinks:['Diagnostic IA','Déploiement IA','Conseil stratégique','Agent IA dédié','Sur mesure'],
-ctLinks:['contact@intelart.ca','+1 613 261 8709','Ottawa, Canada','Demander une démo'],
+svcLinks:[{l:'Diagnostic IA',p:'offre-audit'},{l:'Déploiement IA',p:'offre-sprint'},{l:'Conseil stratégique',p:'offre-consulting'},{l:'Agent IA dédié',p:'offre-agent'},{l:'Sur mesure',p:'offre-surmesure'}],
+ctLinks:['contact@intelart.ca','Ottawa, Canada','Demander une démo'],
 copy:'© 2026 Intelart. Tous droits réservés.',
 right:'Ottawa, Canada · Solutions IA pour PME B2B',
 },
@@ -422,7 +422,7 @@ faqs:[
   {q:'L\'audit me force-t-il à acheter autre chose après ?',a:'Non. Le rapport est un livrable autonome. Vous pouvez l\'utiliser en interne ou avec un autre prestataire. Aucune obligation.'},
   {q:'Combien de temps ça prend côté mon équipe ?',a:'On a besoin de 2-3 heures d\'entretiens au total avec vos équipes clés. Le reste du travail est de notre côté.'},
   {q:'Est-ce que l\'audit couvre aussi les outils existants ?',a:'Oui. On évalue vos outils actuels et comment l\'IA peut s\'y intégrer, ou les remplacer si pertinent.'},
-  {q:'Je peux ensuite passer au Sprint IA ?',a:'Absolument. L\'audit est le point de départ idéal pour un Sprint. Le prix de l\'audit est souvent déduit du Sprint si vous enchaînez.'}
+  {q:'Je peux ensuite passer au Déploiement IA ?',a:'Absolument. L\'audit est le point de départ idéal. Le prix de l\'audit est souvent déduit du Déploiement si vous enchaînez.'}
 ],
 ctaH2:'3 à 5 jours. Un diagnostic complet.',ctaSub:'On trouve vos pertes, vous décidez de la suite.',ctaFinal:'Demander une démo'
 },
@@ -509,7 +509,7 @@ formTitle:'Envoyer votre demande',
 formSub:'Décrivez votre projet, on vous répond sous 48h avec une première analyse.',
 fields:{name:'Nom complet',email:'Email professionnel',company:'Entreprise',sector:'Secteur d\'activité',desc:'Description du projet',budget:'Budget approximatif',delay:'Délai souhaité',ai:'Avez-vous déjà utilisé l\'IA ?'},
 sectorOpts:['Sélectionner...','Recrutement / RH','Services financiers','Opérations / Logistique','Immobilier','Juridique','Santé','Technologie','Autre'],
-budgetOpts:['Sélectionner...','Moins de 5 000 $','5 000 $. 15 000 $','15 000 $. 50 000 $','50 000 $ et plus'],
+budgetOpts:['Sélectionner...','Moins de 5 000 $','5 000 $ - 15 000 $','15 000 $ - 50 000 $','50 000 $ et plus'],
 aiOpts:['Oui','Non','En cours'],
 descPh:'Décrivez votre projet, vos objectifs, et les systèmes existants impliqués.',
 submitBtn:'Envoyer ma demande',sendingBtn:'Envoi en cours...',
@@ -716,7 +716,6 @@ intro:'20 minutes to find where you\'re leaving money on the table. No pitch, no
 h2:'Get in touch', sub:'Not a form that disappears into the void. Response within 24h.',
 info:[
   {icon:'mail',label:'Email',val:'contact@intelart.ca',href:'mailto:contact@intelart.ca'},
-  {icon:'phone',label:'Phone',val:'+1 613 261 8709'},
   {icon:'pin',label:'Location',val:'Ottawa, Ontario, Canada'},
   {icon:'cal',label:'Schedule a call',val:'Book directly →',href:'https://cal.com/intelart/echange-decouverte-discovery-call'},
 ],
@@ -735,10 +734,10 @@ errEmail:'Please enter a valid email',
 footer: {
 tagline:'Others talk about AI. We ship results. B2B SMBs, Canada.',
 cta:'Request a demo',
-navTitle:'Navigation', svcTitle:'Services', ctTitle:'Contact',
+navTitle:'Navigation', svcTitle:'Offers', ctTitle:'Contact',
 navLinks:[{l:'Home',p:'home'},{l:'About',p:'about'},{l:'Services',p:'services'},{l:'Offers',p:'offers'},{l:'Contact',p:'contact'}],
-svcLinks:['AI Diagnostic','AI Deployment','Strategic Consulting','Dedicated AI Agent','Custom'],
-ctLinks:['contact@intelart.ca','+1 613 261 8709','Ottawa, Canada','Request a demo'],
+svcLinks:[{l:'AI Diagnostic',p:'offre-audit'},{l:'AI Deployment',p:'offre-sprint'},{l:'Strategic Consulting',p:'offre-consulting'},{l:'Dedicated AI Agent',p:'offre-agent'},{l:'Custom',p:'offre-surmesure'}],
+ctLinks:['contact@intelart.ca','Ottawa, Canada','Request a demo'],
 copy:'© 2026 Intelart. All rights reserved.',
 right:'Ottawa, Canada · AI Solutions for B2B SMBs',
 },
@@ -921,7 +920,7 @@ faqs:[
   {q:'Does the diagnostic force me to buy anything else?',a:'No. The report is a standalone deliverable. You can use it internally or with another provider. No obligation.'},
   {q:'How much time does it take on my team\'s side?',a:'We need 2-3 hours of interviews total with your key team members. The rest is on us.'},
   {q:'Does the diagnostic also cover existing tools?',a:'Yes. We evaluate your current tools and how AI can integrate, or replace them if relevant.'},
-  {q:'Can I then move to the AI Deployment?',a:'Absolutely. The diagnostic is the ideal starting point. The diagnostic price is often deducted if you proceed.'}
+  {q:'Can I then move to the AI Deployment?',a:'Absolutely. The diagnostic is the ideal starting point. The price is often deducted from the Deployment if you proceed.'}
 ],
 ctaH2:'3 to 5 days. A complete diagnosis.',ctaSub:'We find your losses, you decide what\'s next.',ctaFinal:'Request a demo'
 },
@@ -979,7 +978,7 @@ ctaCal:'Discuss my project',
 trustBadges:['🏗️ Dedicated Infrastructure','🔒 Your data stays with you','🇨🇦 Canadian hosting available'],
 faqTitle:'Frequently asked questions',
 faqs:[
-  {q:'Do my data stay confidential?',a:'Absolutely. The agent is deployed on your infrastructure or a dedicated cloud. Your data never transit through our servers.'},
+  {q:'Do my data stay confidential?',a:'Absolutely. The agent is deployed on your infrastructure or a dedicated cloud. Your data never passes through our servers.'},
   {q:'How long for a complete project?',a:'Depends on complexity. Expect 4 to 8 weeks for a standard agent. We give you a precise estimate after the initial analysis.'},
   {q:'What\'s the price range?',a:'Each project is unique. We provide a detailed quote after analyzing your needs. Contact us for a no-commitment initial call.'},
   {q:'Can the agent integrate with our existing tools?',a:'Yes. We design the agent to work with your current stack. CRM, ERP, email, databases, etc.'}
@@ -1008,7 +1007,7 @@ formTitle:'Submit your request',
 formSub:'Describe your project, we\'ll respond within 48h with an initial analysis.',
 fields:{name:'Full name',email:'Professional email',company:'Company',sector:'Industry',desc:'Project description',budget:'Approximate budget',delay:'Desired timeline',ai:'Have you used AI before?'},
 sectorOpts:['Select...','Recruitment / HR','Financial services','Operations / Logistics','Real Estate','Legal','Healthcare','Technology','Other'],
-budgetOpts:['Select...','Under $5,000','$5,000. $15,000','$15,000. $50,000','$50,000 and above'],
+budgetOpts:['Select...','Under $5,000','$5,000 - $15,000','$15,000 - $50,000','$50,000 and above'],
 aiOpts:['Yes','No','In progress'],
 descPh:'Describe your project, objectives, and existing systems involved.',
 submitBtn:'Submit my request',sendingBtn:'Sending...',
@@ -1318,7 +1317,7 @@ if(ta) ta.placeholder=ct.taph;
 rt('ftr-tagline',f.tagline); rt('ftr-cta',f.cta);
 rt('ftr-nav-title',f.navTitle); rt('ftr-svc-title',f.svcTitle); rt('ftr-ct-title',f.ctTitle);
 r('ftr-nav',f.navLinks.map(l=>`<a href="${PAGE_URLS[l.p]||'#'}${ls}">${l.l}</a>`).join(''));
-r('ftr-svc',f.svcLinks.map(l=>`<a href="/services.html${ls}">${l}</a>`).join(''));
+r('ftr-svc',f.svcLinks.map(l=>`<a href="${PAGE_URLS[l.p]||'#'}${ls}">${l.l}</a>`).join(''));
 r('ftr-ct',f.ctLinks.map((l,i)=>{
 if(l.includes('@')) return `<a href="mailto:${l}">${l}</a>`;
 if(l.includes('{')) return `<a>${l}</a>`;
@@ -1355,7 +1354,7 @@ if(!d) return;
 const container = document.getElementById('sl-'+key);
 if(!container) return;
 
-container.innerHTML = `<section class="sl-hero z1"><div class="wrap"><div class="sl-hero-grid anim"><div><div class="sl-hero-badges">${sec.badges.map(b=>`<span class="tag tag-blue">${b}</span>`).join('')}</div><h1>${d.h1.split('\n').map((l,i)=>i===1?`<span class="gradient-text">${l}</span>`:l).join('<br>')}</h1><p class="lead mt16">${d.sub}</p></div><div class="sl-illustration">${SECTOR_SVG[key]||''}</div></div></div></section><div class="divider"></div><section class="sec z1"><div class="wrap"><div class="anim"><h2>${sec.painTitle}</h2><div class="sl-pain-grid">${d.pains.map(p=>`<div class="sl-pain-card"><div class="sl-pain-icon">${painSvg}</div><div class="sl-pain-title">${p.title}</div><p class="sl-pain-desc">${p.desc}</p></div>`).join('')}</div></div><div class="anim mt48"><h2>${sec.delivTitle}</h2><p class="mt12" style="font-size:16px;font-weight:600;color:var(--acl)">${d.solution}</p><div class="sl-ba-grid"><div class="sl-ba-col sl-ba-before"><div class="sl-ba-label">${sec.beforeLabel}</div><ul class="cross">${d.before.map(b=>`<li>${b}</li>`).join('')}</ul></div><div class="sl-ba-arrow">→</div><div class="sl-ba-col sl-ba-after"><div class="sl-ba-label">${sec.afterLabel}</div><ul class="check">${d.after.map(a=>`<li>${a}</li>`).join('')}</ul></div></div><div class="sl-metrics">${d.metrics.map(m=>`<div class="sl-metric"><div class="sl-metric-num">${m.num}</div><div class="sl-metric-lab">${m.lab}</div></div>`).join('')}</div></div><div class="anim mt48"><h2>${sec.processTitle}</h2><div class="sl-stepper">${sec.procSteps.map(s=>`<div class="sl-step"><div class="sl-step-dot">${ICONS[s.icon]||''}</div><div class="sl-step-title">${s.title}</div><div class="sl-step-day">${s.day}</div></div>`).join('')}</div></div><div class="sl-cta-box anim"><div class="ol-cta-group" style="margin-bottom:16px"><a href="https://cal.com/intelart/echange-decouverte-discovery-call" target="_blank" class="btn btn-primary btn-lg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> ${sec.ctaCal}</a><a href="https://buy.stripe.com/test_7sY7sNdvddJf5Kn90J6wE02" target="_blank" class="btn btn-green btn-lg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> ${sec.ctaPay}</a></div><div class="ol-trust-badges">${sec.trustBadges.map(b=>`<span class="ol-trust-badge">${b}</span>`).join('')}</div></div><div class="anim mt48"><h2>${sec.faqTitle}</h2><div class="ol-faq">${d.faqs.map(f=>`<div class="ol-faq-item"><div class="ol-faq-q">${f.q}</div><p class="ol-faq-a">${f.a}</p></div>`).join('')}</div></div></div></section><section class="sec-sm z1"><div class="wrap"><div class="cta-banner anim"><h2>${sec.ctaH2}</h2><p>${sec.ctaSub}</p><a href="https://cal.com/intelart/echange-decouverte-discovery-call" target="_blank" class="btn btn-primary btn-lg">${sec.ctaFinal}</a></div></div></section>`;
+container.innerHTML = `<section class="sl-hero z1"><div class="wrap"><div class="sl-hero-grid anim"><div><div class="sl-hero-badges">${sec.badges.map(b=>`<span class="tag tag-blue">${b}</span>`).join('')}</div><h1>${d.h1.split('\n').map((l,i)=>i===1?`<span class="gradient-text">${l}</span>`:l).join('<br>')}</h1><p class="lead mt16">${d.sub}</p></div><div class="sl-illustration">${SECTOR_SVG[key]||''}</div></div></div></section><div class="divider"></div><section class="sec z1"><div class="wrap"><div class="anim"><h2>${sec.painTitle}</h2><div class="sl-pain-grid">${d.pains.map(p=>`<div class="sl-pain-card"><div class="sl-pain-icon">${painSvg}</div><div class="sl-pain-title">${p.title}</div><p class="sl-pain-desc">${p.desc}</p></div>`).join('')}</div></div><div class="anim mt48"><h2>${sec.delivTitle}</h2><p class="mt12" style="font-size:16px;font-weight:600;color:var(--acl)">${d.solution}</p><div class="sl-ba-grid"><div class="sl-ba-col sl-ba-before"><div class="sl-ba-label">${sec.beforeLabel}</div><ul class="cross">${d.before.map(b=>`<li>${b}</li>`).join('')}</ul></div><div class="sl-ba-arrow">→</div><div class="sl-ba-col sl-ba-after"><div class="sl-ba-label">${sec.afterLabel}</div><ul class="check">${d.after.map(a=>`<li>${a}</li>`).join('')}</ul></div></div><div class="sl-metrics">${d.metrics.map(m=>`<div class="sl-metric"><div class="sl-metric-num">${m.num}</div><div class="sl-metric-lab">${m.lab}</div></div>`).join('')}</div></div><div class="anim mt48"><h2>${sec.processTitle}</h2><div class="sl-stepper">${sec.procSteps.map(s=>`<div class="sl-step"><div class="sl-step-dot">${ICONS[s.icon]||''}</div><div class="sl-step-title">${s.title}</div><div class="sl-step-day">${s.day}</div></div>`).join('')}</div></div><div class="sl-cta-box anim"><div class="ol-cta-group" style="margin-bottom:16px"><a href="https://cal.com/intelart/echange-decouverte-discovery-call" target="_blank" class="btn btn-primary btn-lg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> ${sec.ctaCal}</a></div><div class="ol-trust-badges">${sec.trustBadges.map(b=>`<span class="ol-trust-badge">${b}</span>`).join('')}</div></div><div class="anim mt48"><h2>${sec.faqTitle}</h2><div class="ol-faq">${d.faqs.map(f=>`<div class="ol-faq-item"><div class="ol-faq-q">${f.q}</div><p class="ol-faq-a">${f.a}</p></div>`).join('')}</div></div></div></section><section class="sec-sm z1"><div class="wrap"><div class="cta-banner anim"><h2>${sec.ctaH2}</h2><p>${sec.ctaSub}</p><a href="https://cal.com/intelart/echange-decouverte-discovery-call" target="_blank" class="btn btn-primary btn-lg">${sec.ctaFinal}</a></div></div></section>`;
 });
 }
 
